@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallety.org</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="favion icon" type="image/png" href="images/favion.png"/>
+  <script src="index.js" defer></script>
+
+
+</head>
+
+<body class="body">
+
+
+  <div class="header">
+      <div class="logo-div">
+        <a href="/"><p class="logo-icon-wrap">
+          <img class="logo-img" src="images/wallety-logo.svg" alt="wallety-logo">
+          <span class="logo-text">Wallety</span>
+        </p></a>
+      </div>
+
+      <div class="dashboard-container">
+        <a class="dashboard-bttn" href="/home.html">Dashboard</a>
+      </div>
+  </div>
+
+  <div id="banner" class="banner">
+    <a target="_blank" href="https://walletyorg.medium.com/wallety-org-beta-release-6079e0df4dfd">
+      <p class="banner-p">Wallety.org announces beta release 🎉</p>
+    </a>
+    <img onclick="closeBanner();" class="banner-close-img" src="images/close.svg">
+  </div>
+
+
+  <div class="main">
+
+    <div class="middle">
+
+      <a href=""><p class="large-text">Wallety.org</p></a>
+      <p class="small-text">multi-chain web 3 analytics service</p>
+
+      <div class="social-icon-container">
+        <a class="social-icon-a" href="https://twitter.com/WalletyOrg" target="_blank">
+          <img class="social-icon" src="images/twitter.svg">
+        </a>
+        <a class="social-icon-a" href="https://t.me/WalletyOrg" target="_blank">
+          <img class="social-icon" src="images/telegram.svg">
+        </a>
+        <a class="social-icon-a" href="mailto:hello@wallety.org">
+          <img class="social-icon" src="images/email.svg">
+        </a>
+        <a class="social-icon-a" href="https://docs.wallety.org/" target="_blank">
+          <img class="social-icon" src="images/docs.svg">
+        </a>
+        <a class="social-icon-a" href="https://github.com/WalletyOrg" target="_blank">
+          <img style="height: 25px;" class="social-icon" src="images/github.svg">
+        </a>
+      </div>
+
+
+
+      <div class="search-bar-div ">
+        <div class="search-bar">
+          <div class="network-option">
+            <select id="network" class="network-option-1">
+              <option value="all">All</option>
+              <option value="polkadot">Polkadot</option>
+              <option value="kusama">Kusama</option>
+            </select>
+          </div>
+      
+          <div class="wallet-input">
+            <input class="wallet-input-1" id="wallet_address" placeholder="Enter wallet address ..." type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+          </div>
+      
+          <div class="search-button">
+            <button class="search-button-1" onclick="submit_entry();" id="search-button">
+              <span class="search-text">Search</span>
+              <span id="loading-gif" class="loading-gif"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <section>
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="wave wave4"></div>
+  </section>
+
+
+
+
+</body>
+<noscript>
+
+  <style>body { display:none; }</style>
+  
+  <meta http-equiv="refresh" content="0; url=enable-javascript.html">
+  
+</noscript>
+</html>
+

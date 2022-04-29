@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallety.org | Home</title>
+  <link rel="stylesheet" href="home-style.css">
+  <link rel="favion icon" type="image/png" href="images/favion.png"/>
+  <script src="home_index.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js" ></script>
+</head>
+
+
+<body class="body" id="body">
+  <div class="cointainer" >
+    
+
+    <div class="aside">
+
+      <a class="a-top" href="/"><div class="top">
+        <img class="top-wallety-img" src="images/wallety-logo.svg" alt="wallety-logo">
+        <div class="top-text-container">
+          <p class="top-wallety-text">Wallety</p>
+          <p class="version-text">Beta</p>
+        </div>
+      </div></a>
+
+      <a href="/home.html" class="active" style="margin-top: 15px;">
+        <span class="menu-icon-container">
+          <img style="filter: brightness(0) invert(0); height: 29px;" class="menu-icon" src="images/home-icon.svg" alt="wallety-home-icon">
+        </span>
+        <h3 class="menu-text">Home</h3>
+      </a>
+      <a href="/polkadot.html" class="network-choice">
+        <span class="menu-icon-container">
+          <img class="menu-icon" src="images/polkadot.svg" alt="wallety-pokadot-icon">
+        </span>
+        <h3 class="menu-text">Polkadot</h3>
+      </a>
+      <a href="/kusama.html" class="network-choice">
+        <span class="menu-icon-container">
+          <span class="kusama-logo-aside-container">
+            <img class="kusama-logo-aside-img" src="images/kusama.svg" alt="wallety-kusama-icon">
+          </span>
+        </span>
+
+        <h3 class="menu-text">Kusama</h3>
+      </a>
+      <button onclick="joinWpopupOpen();" class="join-network">
+        <span class="join-network-img-container">
+          <img class="join-network-img" src="images/wallety-logo.svg">
+        </span>
+        <span class="join-network-p">Join Wallety</span>
+      </button>
+
+      <button onclick="suggestOpen();" class="suggest">
+        <span class="suggest-img-container">
+          <img class="suggest-img" src="images/bug-icon.svg">
+        </span>
+        <span class="suggest-p" style="margin-top: 4.1px;">Report/Request</span>
+      </button>
+
+
+      <div class="bottom-aside">
+
+        <div class="status-p-wrap">Wallety <span class="status" id="status">Inactive</span> <div class="blob"></div></div>
+
+        <div class="wallety-social-container"><p class="wallety-social-container">
+          <a class="wallety-img-container-a" href="https://twitter.com/WalletyOrg" target="_blank">
+            <img class="wallety-social-container-img" src="images/twitter.svg"></a>
+
+          <a class="wallety-img-container-a" href="https://t.me/WalletyOrg" target="_blank">
+            <img class="wallety-social-container-img" src="images/telegram.svg"></a>
+            
+          <a class="wallety-img-container-a" href="mailto:hello@wallety.org">
+            <img class="wallety-social-container-img" src="images/email.svg"></a>
+
+          <a class="wallety-img-container-a" href="https://docs.wallety.org/" target="_blank">
+            <img class="wallety-social-container-img" src="images/docs.svg"></a>
+          
+          <a class="wallety-img-container-a" href="https://github.com/WalletyOrg" target="_blank">
+            <img style="height: 16px;" class="wallety-social-container-img" src="images/github.svg"></a>
+        </p></div>
+
+        <p class="funded-container">
+          <span class="funded-title">Proudly supported by <a target="_blank" href="https://kusama.network/" style="text-decoration: underline;">Kusama</a></span>
+          <img class="funded-img" src="images/kusama-bird.svg">
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="header">
+      <div class="header-left">
+        <div class="search-bar-div ">
+          <div class="search-bar">
+            <div class="network-option">
+              <select id="network" class="network-option-1">
+                <option value="all">All</option>
+                <option value="polkadot">Polkadot</option>
+                <option value="kusama">Kusama</option>
+              </select>
+            </div>
+        
+            <div class="wallet-input">
+              <input class="wallet-input-1" id="wallet_address" placeholder="Enter wallet address ..." type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+            </div>
+        
+            <div class="search-button">
+              <button class="search-button-1" onclick="submit_entry();" id="search-button">
+                <span class="search-text">Search</span>
+                <span id="loading-gif" class="loading-gif"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="header-right">
+
+        <div class="network-widget">
+          <img class="network-widget-img" src="images/wallety-logo.svg">
+          <p class="network-widget-p">Wallety</p>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="loading-screen" id="loading-screen">
+      <p class="loading-screen-p">Wallety.org</p>
+      <img src="images/loading.gif" class="loading-screen-img">
+    </div>
+
+    <div class="servers-down" id="serversDown">
+      <div class="servers-down-container">
+        <p class="servers-down-img-container">
+          <img class="servers-down-img" src="images/wallety-logo.svg">
+        </p>
+        <p class="servers-down-p">Internal Server Error</p>
+        <p class="servers-down-p-s">Our server's are down ! We have been notified, please try again later</p>
+      </div>
+    </div>
+    
+    <div class="main" id="main">
+
+
+        <div class="welcome-container">
+          <div class="welcome-card">
+            <p class="welcome-title">Wallety.org</p>
+            <p class="welcome-text">multi-chain web 3 analytics service</p>
+          </div>
+        </div>
+
+  
+  
+        <div class="supported-networks-card">
+          <div class="supported-networks-container">
+            <p class="supported-networks-title">Supported Networks</p>
+            <div class="supported-networks">
+      
+  
+                <div class="network">
+                  <img class="network-img" src="images/polkadot.svg">
+                  <p class="network-title">Polkadot</p>
+                  <p class="network-description">Polkadot enables interoperability between blockchains.</p>
+  
+                    <p class="network-socials">
+                      <a target="_blank" class="network-social-a" href="https://twitter.com/polkadot">
+                        <img class="network-social-img" src="images/twitter.svg">
+                      </a>
+                      <a target="_blank" class="network-social-a" href="https://polkadot.network/">
+                        <img class="network-social-img" src="images/website.svg">
+                      </a>
+                      <a target="_blank" class="network-social-a" href="https://discord.com/invite/wGUDt2p">
+                        <img class="network-social-img" src="images/discord.svg">
+                      </a>
+                      <a target="_blank" class="network-social-a" href="https://www.reddit.com/r/Polkadot/">
+                        <img class="network-social-img" src="images/reddit.svg">
+                      </a>
+                    </p>
+  
+                    <div class="network-status">
+                      <p class="network-status-p">Wallety Server <span class="network-status-span" id="polkadot-status">Inactive</span></p>
+                      <div id="polkadot-blob" class="blob"></div>
+                    </div>
+  
+                </div>
+  
+      
+  
+                <div class="network">
+                  <div class="kusama-container-div">
+                    <div class="kusama-container">
+                      <img class="kusama-img" src="images/kusama.svg">
+                    </div>
+                  </div>
+                  <p class="network-title">Kusama</p>
+                  <p class="network-description">Kusama is a public pre-production environment for Polkadot.</p>
+                  <p class="network-socials">
+                    <a target="_blank" class="network-social-a" href="https://twitter.com/kusamanetwork">
+                      <img class="network-social-img" src="images/twitter.svg">
+                    </a>
+                    <a target="_blank" class="network-social-a" href="https://kusama.network/">
+                      <img class="network-social-img" src="images/website.svg">
+                    </a>
+                    <a target="_blank" class="network-social-a" href="https://discord.com/invite/9AWjTf8wSk">
+                      <img class="network-social-img" src="images/discord.svg">
+                    </a>
+                    <a target="_blank" class="network-social-a" href="https://www.reddit.com/r/Kusama/">
+                      <img class="network-social-img" src="images/reddit.svg">
+                    </a>
+                  </p>
+                  <div class="network-status">
+                    <p class="network-status-p">Wallety Server <span class="network-status-span" id="kusama-status">Inactive</span></p>
+                    <div id="kusama-blob" class="blob"></div>
+                  </div>
+                </div>
+  
+            </div>
+  
+          </div>
+          
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="main-bottom" id="main-bottom">
+      <section>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+      </section>
+    </div>
+
+
+  </div>
+
+
+
+<!-- join network pop up -->
+
+<div class="join-network-m-container" id="joinWallety">
+  <div class="join-network-m">
+    <p class="join-w-close-p">
+      <button class="join-w-close" onclick="joinWpopupClose();">
+        <img class="join-w-close-img" src="images/close.svg">
+      </button>
+    </p>
+    <p class="join-w-text">Join Wallety.org</p>
+    <p class="join-w-small-text">Multi-chain web 3 analytics service for</p>
+    <p class="join-w-small-text">Chain's, NFT's, Token's and everything inbetween</p>
+    <div class="join-w-form">
+      <input class="aa" placeholder="Your Name:" id="form_name" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ab" placeholder="Your Role:" id="form_role" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ac" placeholder="Your Email:" id="form_email" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ad" placeholder="Project Name:" id="form_project" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ae" placeholder="Project Website:" id="form_website" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="af" placeholder="Mainnet / Testnet :" id="form_net" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ag" placeholder="Any Additional Comments :" id="form_comments" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+    </div>
+
+    <button onclick="sendJoinForm();" id="join-w-submit" class="join-w-submit">Submit</button>
+
+  </div>
+</div>
+
+
+<!-- tools pop up -->
+
+
+<div class="tool-container-popup" id="tools">
+  <div class="tool-bar-popup">
+
+    <p class="tool-bar-popup-close-p">
+      <button class="tool-bar-popup-close" onclick="toolBarClose();">
+        <img class="tool-bar-popup-close-img" src="images/close.svg">
+      </button>
+    </p>
+
+    <p class="tool-popup-text">Tools</p>
+
+    <div class="tool-options-container">
+
+      <div class="tool-options-item">
+        <img class="tool-bar-option-img" src="images/download-icon.svg">
+        <p class="tool-item-title">Download</p>
+
+        <div class="tool-container">
+          <button class="tool-item" onclick="CSVdata();">CSV</button>
+        </div>
+
+      </div>
+
+      <div class="tool-options-item">
+        <img class="tool-bar-option-img" src="images/share-icon.svg">
+        <p class="tool-item-title">Share</p>
+
+        <div class="tool-container">
+          <button class="tool-item" onclick="TWITTERdata();">Twitter</button>
+          <button class="tool-item" onclick="FACEBOOKdata();">Facebook</button>
+          <button class="tool-item" onclick="LINKEDINdata();">Linkedin</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- suggest / report pop up -->
+
+<div class="suggest-container-popup" id="suggest">
+  <div class="suggest-popup">
+
+    <p class="suggest-popup-close-p">
+      <button class="suggest-popup-close" onclick="suggestClose();">
+        <img class="suggest-popup-close-img" src="images/close.svg">
+      </button>
+    </p>
+
+    <p class="suggest-popup-text">Report / Request</p>
+    <p class="suggest-popup-text-small">Want us to add somthing cool or you see a bug ?</p>
+
+    <div class="suggest-form">
+      <input class="suggest-input" placeholder="Let us know !" id="suggestion" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+
+      <button onclick="sendSuggestForm();" id="suggest-submit" class="suggest-submit">Submit</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</body>
+
+
+
+<noscript>
+
+  <style>body { display:none; }</style>
+  
+  <meta http-equiv="refresh" content="0; url=enable-javascript.html">
+  
+</noscript>
+</html>

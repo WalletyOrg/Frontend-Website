@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallety.org | Kusama</title>
+  <link rel="stylesheet" href="kusama-style.css">
+  <link rel="favion icon" type="image/png" href="images/favion.png"/>
+  <script src="kusama_index.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js" ></script>
+</head>
+
+
+<body class="body" id="body">
+  <div class="cointainer" >
+    
+
+    <div class="aside">
+
+      <a class="a-top" href="/"><div class="top">
+        <img class="top-wallety-img" src="images/wallety-logo.svg" alt="wallety-logo">
+        <div class="top-text-container">
+          <p class="top-wallety-text">Wallety</p>
+          <p class="version-text">Beta</p>
+        </div>
+      </div></a>
+
+      <a href="/home.html" class="network-choice" style="margin-top: 15px;">
+        <span class="menu-icon-container">
+          <img style="filter: brightness(0) invert(0); height: 29px;" class="menu-icon" src="images/home-icon.svg" alt="wallety-home-icon">
+        </span>
+        <h3 class="menu-text">Home</h3>
+      </a>
+      <a href="/polkadot.html" class="network-choice">
+        <span class="menu-icon-container">
+          <img class="menu-icon" src="images/polkadot.svg" alt="wallety-pokadot-icon">
+        </span>
+        <h3 class="menu-text">Polkadot</h3>
+      </a>
+      <a href="/kusama.html" class="active">
+        <span class="menu-icon-container">
+          <span class="kusama-logo-aside-container">
+            <img class="kusama-logo-aside-img" src="images/kusama.svg" alt="wallety-kusama-icon">
+          </span>
+        </span>
+
+        <h3 class="menu-text">Kusama</h3>
+      </a>
+      <button onclick="joinWpopupOpen();" class="join-network">
+        <span class="join-network-img-container">
+          <img class="join-network-img" src="images/wallety-logo.svg">
+        </span>
+        <span class="join-network-p">Join Wallety</span>
+      </button>
+
+      <button onclick="suggestOpen();" class="suggest">
+        <span class="suggest-img-container">
+          <img class="suggest-img" src="images/bug-icon.svg">
+        </span>
+        <span class="suggest-p" style="margin-top: 4.1px;">Report/Request</span>
+      </button>
+
+
+      <div class="bottom-aside">
+
+        <div class="status-p-wrap">Wallety <span class="status" id="status">Inactive</span> <div class="blob"></div></div>
+
+        <div class="wallety-social-container"><p class="wallety-social-container">
+
+          <a class="wallety-img-container-a" href="https://twitter.com/WalletyOrg" target="_blank">
+            <img class="wallety-social-container-img" src="images/twitter.svg"></a>
+
+          <a class="wallety-img-container-a" href="https://t.me/WalletyOrg" target="_blank">
+            <img class="wallety-social-container-img" src="images/telegram.svg"></a>
+            
+          <a class="wallety-img-container-a" href="mailto:hello@wallety.org">
+            <img class="wallety-social-container-img" src="images/email.svg"></a>
+
+          <a class="wallety-img-container-a" href="https://docs.wallety.org/" target="_blank">
+            <img class="wallety-social-container-img" src="images/docs.svg"></a>
+          
+          <a class="wallety-img-container-a" href="https://github.com/WalletyOrg" target="_blank">
+            <img style="height: 16px;" class="wallety-social-container-img" src="images/github.svg"></a>
+
+        </p></div>
+
+        <p class="funded-container">
+          <span class="funded-title">Proudly supported by <a target="_blank" href="https://kusama.network/" style="text-decoration: underline;">Kusama</a></span>
+          <img class="funded-img" src="images/kusama-bird.svg">
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="header">
+      <div class="header-left">
+        <div class="search-bar-div ">
+          <div class="search-bar">
+            <div class="network-option">
+              <select id="network" class="network-option-1">
+                <option value="kusama">Kusama</option>
+                <option value="all">All</option>
+                <option value="polkadot">Polkadot</option>
+              </select>
+            </div>
+        
+            <div class="wallet-input">
+              <input class="wallet-input-1" id="wallet_address" placeholder="Enter wallet address ..." type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+            </div>
+        
+            <div class="search-button">
+              <button class="search-button-1" onclick="submit_entry();" id="search-button">
+                <span class="search-text">Search</span>
+                <span id="loading-gif" class="loading-gif"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="header-right">
+
+        <div class="network-widget">
+          <span class="kusama-network-widget-container">
+            <img class="network-widget-img" src="images/kusama.svg">
+          </span>
+          <p class="network-widget-p">Kusama</p>
+        </div>
+
+        <div class="network-social-tags-div">
+          <div class="network-social-tags-container">
+            <a class="network-social-tags-container-a" target="_blank" href="https://kusama.network/">
+              <img class="network-social-tags-container-img" src="images/website.svg"></a>
+            <a class="network-social-tags-container-a" target="_blank" href="https://twitter.com/kusamanetwork">
+              <img class="network-social-tags-container-img" src="images/twitter.svg"></a>
+          </div>
+          <div class="network-social-tags-container">
+            <a class="network-social-tags-container-a" target="_blank" href="https://discord.gg/9AWjTf8wSk">
+              <img class="network-social-tags-container-img" src="images/discord.svg"></a>
+            <a class="network-social-tags-container-a" target="_blank" href="https://www.reddit.com/r/Kusama/">
+              <img class="network-social-tags-container-img" src="images/reddit.svg"></a>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="loading-screen" id="loading-screen">
+      <p class="loading-screen-p">Wallety.org</p>
+      <img src="images/loading.gif" class="loading-screen-img">
+    </div>
+
+    <div class="servers-down" id="serversDown">
+      <div class="servers-down-container">
+        <p class="servers-down-img-container">
+          <img class="servers-down-img" src="images/wallety-logo.svg">
+        </p>
+        <p class="servers-down-p">Internal Server Error</p>
+        <p class="servers-down-p-s">Our server's are down ! We have been notified, please try again later</p>
+      </div>
+    </div>
+    
+    <div class="main" id="main">
+      
+      <div class="grid-container">
+
+        <div class="tools">
+
+          <p class="left-tools">
+            <span class="date" id="current_dates">loading</span>
+          </p>
+
+
+          <div class="middle-tools">
+
+
+            <div class="middle-tool-div">
+              <span class="middle-ksm-tool">
+                <img class="kusama-middle-img" src="images/kusama.svg">
+              </span>
+              <p class="middle-tool-text" id="kusama_price">loading</p>
+              <p class="middle-tool-text" id="kusama_p_increase" style="margin-right: 2px;">loading</p>
+              <img class="middle-tool-text-img" id="middle-tool-text-img">
+            </div>
+    
+            <div class="middle-tool-div">
+              <img class="middle-tool-img" src="images/marketcap.svg">
+              <p class="middle-tool-text" id="market_cap">loading</p>
+            </div>
+
+            <div class="middle-tool-div">
+              <img class="middle-tool-img" src="images/transfer.svg">
+              <p class="middle-tool-text" id="transfer_count">loading</p>
+            </div>
+
+            <div class="middle-tool-div">
+              <img class="middle-tool-img" src="images/gas.svg">
+              <p class="middle-tool-text" id="coin_gas_price">loading</p>
+              <p class="middle-tool-text" id="dollar_gas_price">loading</p>
+            </div>
+    
+          </div>
+
+
+          <p class="currency-tools">
+            <button class="currency-tool-button" id="currencyDollar" style="background-color: black; color: white;" onclick="changeCurrencyDollar();">
+              <span class="currency-tool-text" id="loading-span-dollar">$</span>
+            </button>
+            <button class="currency-tool-button" id="currencyPound" onclick="changeCurrencyPound();">
+              <span class="currency-tool-text" id="loading-span-pound">£</span>
+            </button>
+            <button class="currency-tool-button" id="currencyEuro" onclick="changeCurrencyEuro();">
+              <span class="currency-tool-text" id="loading-span-euro">€</span>
+            </button>
+          </p>
+
+          <p class="right-tools">
+            <button class="tools-toolbar" onclick="toolBarOpen();">
+              <span class="tools-toolbar-text">Tools</span>
+              <img class="tools-img-wrap" src="images/tools-icon.svg">
+            </button>
+          </p>
+
+        </div>
+
+
+
+
+        <div class="profile">
+          <div class="profile-container">
+            <div class="name">
+              <p class="profile-text-wrap1">Display Name</p>
+
+              <div class="display-name-wrap">
+                <p class="display_name"id="display_name">-</p>
+                <div class="judgement-img-wrap" id="judgement_img"></div>
+              </div>
+            </div>
+
+            <div class="legal-name">
+              <p class="profile-text-wrap1">Legal Name</p>
+              <p class="profile-text-wrap2" id="legal_name">-</p>
+            </div>
+
+            <div class="index">
+              <p class="profile-text-wrap1">Index</p>
+              <p class="profile-text-wrap2" id="index">-</p>
+            </div>
+
+            <div class="role">
+              <p class="profile-text-wrap1">Role</p>
+              <p class="profile-text-wrap2" id="role">-</p>
+            </div>
+
+            <div class="socials">
+              <p class="profile-text-wrap1" style="margin-bottom: 0;">Socials</p>
+
+              <div class="socials-div-container">
+                <p id="socials-dash" class="socials-dash">-</p>
+                <div class="socials-div" id="socials-div">
+
+                  <div class="twitter-tooltip" id="twitter-tooltip">
+                    <a class="socials-a" target="_blank" id="wallet-twitter"></a>
+                    <a target="_blank" id="wallet-twitter-tt" class="twitter-tooltiptext"></a>
+                  </div>  
+
+                  <div class="website-tooltip" id="website-tooltip">
+                    <a class="socials-a" target="_blank" id="wallet-website"></a>
+                    <a target="_blank" id="wallet-website-tt" class="website-tooltiptext"></a>
+                  </div>    
+
+                  <div class="email-tooltip" id="email-tooltip">
+                    <a class="socials-a" target="_blank" id="wallet-email"></a>
+                    <a target="_blank" id="wallet-email-tt" class="email-tooltiptext"></a>
+                  </div>
+
+                  <div class="element-tooltip" id="element-tooltip">
+                    <a class="socials-a" target="_blank" id="wallet-element"></a>
+                    <a target="_blank" id="wallet-element-tt" class="element-tooltiptext"></a>
+                  </div>
+
+
+                  <div onmouseover="copy_key_reset();" class="key-tooltip" id="key-tooltip">
+                    <span class="socials-a" class="wallet-key-span" id="wallet-key" onclick="copy_key();"></span>
+                    <span id="tool-tip-wallet-key" class="key-tooltiptext" onclick="copy_key();"></span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        
+        
+        <div class="balances">
+          <div class="balances-container">
+            <div class="total-balance">
+              <p class="balance-text-wrap1">Total Balance</p>
+              <div class="balance-double-line-wrap">
+                <p class="balance-text-wrap2" id="total_balance">-</p>
+                <p class="balance-text-wrap3" id="total_balance_dollars">-</p>
+              </div>
+            </div>
+
+            <div class="transferable-balance">
+              <p class="balance-text-wrap1">Transferable Balance</p>
+              <div class="balance-double-line-wrap">
+                <p class="balance-text-wrap2" id="transferable_balance">-</p>
+                <p class="balance-text-wrap3" id="transferable_balance_dollars">-</p>
+              </div>
+            </div>
+
+            <div class="locked-balance">
+              <p class="balance-text-wrap1">Locked Balance</p>
+              <div class="balance-double-line-wrap">
+                <p class="balance-text-wrap2" id="locked_balance">-</p>
+                <p class="balance-text-wrap3" id="locked_balance_dollars">-</p>
+              </div>
+            </div>
+
+            <div class="reserved-balance-balance">
+              <p class="balance-text-wrap1">Reserved Balance</p>
+              <div class="balance-double-line-wrap">
+                <p class="balance-text-wrap2" id="reserved_balance">-</p>
+                <p class="balance-text-wrap3" id="reserved_balance_dollars">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="paperDiamondHanded">
+
+          <div class="paper">
+
+            <div class="paper-p">
+              <div class="win-des-tooltip" style="margin-top: 2.5px;">
+                <img src="images/description.svg" class="win-des-icon">
+                <p class="win-des-tooltiptext" style="width: 100px;">Paper handeded lets you see the amount of funds you have lost from transfering assets out of your wallet</p>
+              </div>
+              <span>Paper Handed 🧻🙌</span>
+            </div>
+
+            <p class="paper-v" id="paper-coins">-</p>
+            <p class="paper-v" id="paper-dollars">-</p>
+          </div>
+
+          <div class="diamond">
+            <div class="diamond-p">
+              <div class="win-des-tooltip" style="margin-top: 2.5px;">
+                <img src="images/description.svg" class="win-des-icon">
+                <p class="win-des-tooltiptext" style="width: 100px;">Diamond handeded lets you see the amount of funds you have gained from holding assets in your wallet</p>
+              </div>
+              <span>Diamond Handed 💎🙌</span>
+            </div>
+            <p class="diamond-v" id="diamond-coins">-</p>
+            <p class="diamond-v" id="diamond-dollars">-</p>
+          </div>
+
+        </div>
+
+
+
+        <div class="txns">
+
+          <div class="txns-title">
+            <div class="win-des-tooltip">
+              <img src="images/description.svg" class="win-des-icon">
+              <p class="win-des-tooltiptext" style="width: 100px;">These are your unformatted deposit and withdrawal total transfers</p>
+            </div>
+            <span style="font-weight: bold;">Total Transfers</span>
+          </div>
+
+
+          <div class="deposit-txns">
+            <p class="txns-title-small">Deposits</p>
+            <div class="scroll-raw-txns" id="raw-deposits">-</div>
+          </div>
+
+          <div class="withdrawal-txns">
+            <p class="txns-title-small">Withdrawals</p>
+            <div class="scroll-raw-txns" id="raw-withdrawals">-</div>
+          </div>
+
+        </div>
+
+
+
+        <div class="mt-data-container">
+    
+          <div class="monthly-data">
+
+
+
+
+            <div class="monthly-data-title-div">
+
+
+              <div class="custom-time-period-container">
+
+                <button onclick="customizeOpen();" class="custom-button">
+                  <span class="custom-text">Customize</span>
+                  <span id="customLoading" class="custom-loading-container">
+                    <img src="images/custom-data-icon.svg">
+                  </span>
+                </button>
+                
+              </div>
+
+              
+
+              <div class="custom-tooltip">
+
+                <div class="customtooltip-div" id="customtooltipdiv">
+                  <input style="margin-left: 3px;" class="custom-form-item" type="date" id="custom-from">
+                  <span class="custom-date-text">to</span>
+                  <input class="custom-form-item" type="date" id="custom-to">
+                  <button style="margin-right: 1px;" class="custom-data-search" onclick="customData();">Search</button>
+                  <img onclick="customizeClose();" class="custom-close" src="images/close.svg">
+                </div>
+
+              </div>
+
+
+
+              <div class="custom-data-title">
+                <div class="monthly-data-title-p" style="margin-top: 14px;">
+                  <div class="win-des-tooltip">
+                    <img src="images/description.svg" class="win-des-icon">
+                    <p id="monthly-t-data-tooltip" class="win-des-tooltiptext">Monthly transfer data lets you see your total, deposit and withdrawal monthly asset spending and data</p>
+                  </div>
+                  <span id="monthly-data-title">Monthly Transfer Data</span>
+                </div>
+                <p class="monthly-data-title-date" id="monthly-data-title-date">-</p>
+              </div>
+
+
+            </div>
+
+            <div class="monthly-total-data">
+              <div class="monthly-total-title">
+                <p class="monthly-total-p-b"  id="monthly-total-data-title">Monthly Total</p>
+              </div>
+              <div class="monthly-total-volume">
+                <p class="monthly-total-p-b">Volume</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-total-p-double" id="monthly_total_volume_coins">-</p>
+                  <p class="monthly-total-p-double" id="monthly_total_volume_dollars">-</p>
+                </div>
+              </div>
+              <div class="monthly-total-gas">
+                <p class="monthly-total-p-b">Gas</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-total-p-double" id="monthly_total_gas_coin">-</p>
+                  <p class="monthly-total-p-double" id="monthly_total_gas_dollars">-</p>
+                </div>
+              </div>
+              <div class="monthly-total-failed-gas">
+                <p class="monthly-total-p-b">Failed Gas</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-total-p-double" id="monthly_total_failed_gas_coin">-</p>
+                  <p class="monthly-total-p-double" id="monthly_total_failed_gas_dollars">-</p>
+                </div>
+              </div>
+              <div class="monthly-total-interactions">
+                <p class="monthly-total-p-b">Interactions</p>
+                <p class="monthly-total-p" id="monthly_total_interactions">-</p>
+              </div>
+              <div class="monthly-total-successful-interactions">
+                <p class="monthly-total-p-b">Successful Interactions</p>
+                <p class="monthly-total-p" id="monthly-total-successful-interactions">-</p>
+              </div>
+              <div class="monthly-total-failed-interactions">
+                <p class="monthly-total-p-b">Failed Interactions</p>
+                <p class="monthly-total-p" id="monthly_total_failed_interactions">-</p>
+              </div>
+
+              <div class="monthly-total-txn-date-wrap" style="border: 0;">
+
+                <div class="monthly-total-first-txn">
+                  <p class="monthly-total-p-b">First TXN</p>
+                  <div class="monthly-double-line-wrap">
+                    <p class="monthly-total-p-double" style="max-width: 100%;" id="monthly_total_first_txn_date_date">-</p>
+                    <p class="monthly-total-p-double" id="monthly_total_first_txn_date_days">-</p>
+                  </div>
+                </div>
+
+                <div class="monthly-total-last-txn">
+                  <p class="monthly-total-p-b">Last TXN</p>
+                  <div class="monthly-double-line-wrap">
+                    <p class="monthly-total-p-double" style="max-width: 100%;" id="monthly_total_last_txn_date_date">-</p>
+                    <p class="monthly-total-p-double" id="monthly_total_last_txn_date_days">-</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="monthly-deposit-data">
+              <div class="monthly-deposit-title">
+                <p class="monthly-deposit-p-b" id="monthly-deposit-data-title">Monthly Deposit</p>
+              </div>
+
+              <div class="monthly-deposit-volume">
+                <p class="monthly-deposit-p-b">Volume</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-deposit-p-double" id="monthly_deposit_volume_coins">-</p>
+                  <p class="monthly-deposit-p-double" id="monthly_deposit_volume_dollars">-</p>
+                </div>
+              </div>
+
+              <div class="monthly-deposit-interactions">
+                <p class="monthly-deposit-p-b">Successful Interactions</p>
+                <p class="monthly-deposit-p" id="monthly_deposit_interactions">-</p>
+              </div>
+
+              <div class="monthly-deposit-first-txn">
+                <p class="monthly-deposit-p-b">First TXN</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-deposit-p-double" style="max-width: 100%;" id="monthly_deposits_first_txn_date_date">-</p>
+                  <p class="monthly-deposit-p-double" id="monthly_deposits_first_txn_date_days">-</p>
+                </div>
+              </div>
+
+              <div class="monthly-deposit-last-txn">
+                <p class="monthly-deposit-p-b">Last TXN</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-deposit-p-double" style="max-width: 100%;" id="monthly_deposits_last_txn_date_date">-</p>
+                  <p class="monthly-deposit-p-double" id="monthly_deposits_last_txn_date_days">-</p>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+            <div class="monthly-withdrawal-data">
+              <div class="monthly-withdrawal-title">
+                <p class="monthly-withdrawal-p-b" id="monthly-withdrawal-data-title">Monthly Withdrawal</p>
+              </div>
+
+              <div class="monthly-withdrawal-volume">
+                <p class="monthly-withdrawal-p-b">Volume</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-withdrawal-p-double" id="monthly_withdrawal_volume_coin">-</p>
+                  <p class="monthly-withdrawal-p-double" id="monthly_withdrawal_volume_dollars">-</p>
+                </div>
+              </div>
+
+              <div class="monthly-withdrawal-interactions">
+                <p class="monthly-withdrawal-p-b">Interactions</p>
+                <p class="monthly-withdrawal-p" id="monthly_withdrawal_interactions">-</p>
+              </div>
+
+              <div class="monthly-withdrawal-successful-interactions">
+                <p class="monthly-withdrawal-p-b">Successful Interactions</p>
+                <p class="monthly-withdrawal-p" id="monthly-withdrawal-successful-interactions">-</p>
+              </div>
+
+              <div class="monthly-withdrawal-failed-interactions">
+                <p class="monthly-withdrawal-p-b">Failed Interactions</p>
+                <p class="monthly-withdrawal-p" id="monthly_withdrawal_failed_interactions">-</p>
+              </div>
+              
+              <div class="monthly-withdrawal-gas">
+                <p class="monthly-withdrawal-p-b">Gas</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-withdrawal-p-double" id="monthly_withdrawal_gas_coin">-</p>
+                  <p class="monthly-withdrawal-p-double" id="monthly_withdrawal_gas_dollars">-</p>
+                </div>
+              </div>
+
+              <div class="monthly-withdrawal-failed-gas">
+                <p class="monthly-withdrawal-p-b">Failed Gas</p>
+                <div class="monthly-double-line-wrap">
+                  <p class="monthly-withdrawal-p-double" id="monthly_withdrawal_failed_gas_coin">-</p>
+                  <p class="monthly-withdrawal-p-double" id="monthly_withdrawal_failed_gas_dollars">-</p>
+                </div>
+              </div>
+
+
+              <div class="monthly-withdrawal-txn-date-wrap" style="border: 0;">
+                
+                <div class="monthly-withdrawal-first-txn">
+                  <p class="monthly-withdrawal-p-b">First TXN</p>
+                  <div class="monthly-double-line-wrap">
+                    <p class="monthly-withdrawal-p-double" style="max-width: 100%;" id="monthly_withdrawal_first_txn_date_date">-</p>
+                    <p class="monthly-withdrawal-p-double" id="monthly_withdrawal_first_txn_date_days">-</p>
+                  </div>
+                </div>
+
+                <div class="monthly-withdrawal-last-txn">
+                  <p class="monthly-withdrawal-p-b">Last TXN</p>
+                  <div class="monthly-double-line-wrap">
+                    <p class="monthly-withdrawal-p-double" style="max-width: 100%;" id="monthly_withdrawal_last_txn_date_date">-</p>
+                    <p class="monthly-withdrawal-p-double" id="monthly_withdrawal_last_txn_date_days">-</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          
+          
+          <div class="monthly-unique-wallets">
+
+            <div class="monthly-unique-title">
+              <div class="win-des-tooltip">
+                <img src="images/description.svg" class="win-des-icon">
+                <p id="monthly-u-data-tooltip" class="win-des-tooltiptext">Monthly unique wallets lets you see your total, withdrawal and deposited interactions with individual addreses you have transacted with this month</p>
+              </div>
+              <span id="monthly-unique-title">Monthly Unique Wallets</span>
+            </div>
+  
+
+            <div class="monthly-unique-wallets-total">
+              <p class="monthly-unique-wallets-p" id="monthly-unique-wallets-total-p">Monthly Total</p>
+              <div class="m-unique-scroll-div" id="monthly-unique-wallets-total">-</div>
+            </div>
+
+            <div class="monthly-unique-wallets-deposits">
+              <p class="monthly-unique-wallets-p" id="monthly-unique-wallets-deposit-p">Monthly Deposits</p>
+              <div class="m-unique-scroll-div" id="monthly-unique-wallets-deposits">-</div>
+            </div>
+
+            <div class="monthly-unique-wallets-withdrawals">
+              <p class="monthly-unique-wallets-p" id="monthly-unique-wallets-withdrawal-p">Monthly Withdrawals</p>
+              <div class="m-unique-scroll-div" id="monthly-unique-wallets-withdrawals">-</div>
+            </div>
+
+          </div>
+
+
+
+          <div class="total-data">
+
+            <div class="total-data-title">
+
+              <div class="total-data-title-p" style="margin-top: 14px;">
+                <div class="win-des-tooltip">
+                  <img src="images/description.svg" class="win-des-icon">
+                  <p class="win-des-tooltiptext">Total transfer data lets you see your total, deposit and withdrawal total asset spending and data</p>
+                </div>
+                <span>Total Transfer Data</span>
+              </div>
+
+              <p class="total-data-title-date" id="total-data-title-date">-</p>
+
+            </div>
+
+            <div class="total-total-data">
+              <div class="total-total-title">
+                <p class="total-total-p-b">Total Total</p>
+              </div>
+              <div class="total-total-volume">
+                <p class="total-total-p-b">Volume</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-total-p-double" id="total_total_volume_coins">-</p>
+                  <p class="total-total-p-double" id="total_total_volume_dollars">-</p>
+                </div>
+              </div>
+              <div class="total-total-gas">
+                <p class="total-total-p-b">Gas</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-total-p-double" id="total_total_gas_coin">-</p>
+                  <p class="total-total-p-double" id="total_total_gas_dollars">-</p>
+                </div>
+              </div>
+              <div class="total-total-failed-gas">
+                <p class="total-total-p-b">Failed Gas</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-total-p-double" id="total_total_failed_gas_coin">-</p>
+                  <p class="total-total-p-double" id="total_total_failed_gas_dollars">-</p>
+                </div>
+              </div>
+              <div class="total-total-interactions">
+                <p class="total-total-p-b">Interactions</p>
+                <p class="total-total-p" id="total_total_interactions">-</p>
+              </div>
+              <div class="total-total-successful-interactions">
+                <p class="total-total-p-b">Successful Interactions</p>
+                <p class="total-total-p" id="total-total-successful-interactions">-</p>
+              </div>
+              <div class="total-total-failed-interactions">
+                <p class="total-total-p-b">Failed Interactions</p>
+                <p class="total-total-p" id="total_total_failed_interactions">-</p>
+              </div>
+
+
+              <div class="total-total-txn-date-wrap" style="border: 0;">
+
+                <div class="total-total-first-txn">
+                  <p class="total-total-p-b">First TXN</p>
+                  <div class="total-double-line-wrap">
+                    <p class="total-total-p-double" style="max-width: 100%;" id="total_total_first_txn_date_date">-</p>
+                    <p class="total-total-p-double" id="total_total_first_txn_date_days">-</p>
+                  </div>
+                </div>
+
+                <div class="total-total-last-txn">
+                  <p class="total-total-p-b">Last TXN</p>
+                  <div class="total-double-line-wrap">
+                    <p class="total-total-p-double" style="max-width: 100%;" id="total_total_last_txn_date_date">-</p>
+                    <p class="total-total-p-double" id="total_total_last_txn_date_days">-</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="total-deposit-data">
+              <div class="total-deposit-title">
+                <p class="total-deposit-p-b">Total Deposits</p>
+              </div>
+
+              <div class="total-deposit-volume">
+                <p class="total-deposit-p-b">Volume</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-deposit-p-double" id="total_deposit_volume_coins">-</p>
+                  <p class="total-deposit-p-double" id="total_deposit_volume_dollars">-</p>
+                </div>
+              </div>
+
+              <div class="total-deposit-interactions">
+                <p class="total-deposit-p-b">Successful Interactions</p>
+                <p class="total-deposit-p" id="total_deposit_interactions">-</p>
+              </div>
+
+              <div class="total-deposit-first-txn">
+                <p class="total-deposit-p-b">First TXN</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-deposit-p-double" style="max-width: 100%;" id="total_deposits_first_txn_date_date">-</p>
+                  <p class="total-deposit-p-double" id="total_deposits_first_txn_date_days">-</p>
+                </div>
+              </div>
+
+              <div class="total-deposit-last-txn">
+                <p class="total-deposit-p-b">Last TXN</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-deposit-p-double" style="max-width: 100%;" id="total_deposits_last_txn_date_date">-</p>
+                  <p class="total-deposit-p-double" id="total_deposits_last_txn_date_days">-</p>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+            <div class="total-withdrawal-data">
+              <div class="total-withdrawal-title">
+                <p class="total-withdrawal-p-b">Total Withdrawals</p>
+              </div>
+
+              <div class="total-withdrawal-volume">
+                <p class="total-withdrawal-p-b">Volume</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-withdrawal-p-double" id="total_withdrawal_volume_coin">-</p>
+                  <p class="total-withdrawal-p-double" id="total_withdrawal_volume_dollars">-</p>
+                </div>
+              </div>
+
+              <div class="total-withdrawal-interactions">
+                <p class="total-withdrawal-p-b">Interactions</p>
+                <p class="total-withdrawal-p" id="total_withdrawal_interactions">-</p>
+              </div>
+
+              <div class="total-withdrawal-successful-interactions">
+                <p class="total-withdrawal-p-b">Successful Interactions</p>
+                <p class="total-withdrawal-p" id="total-withdrawal-successful-interactions">-</p>
+              </div>
+
+              <div class="total-withdrawal-failed-interactions">
+                <p class="total-withdrawal-p-b">Failed Interactions</p>
+                <p class="total-withdrawal-p" id="total_withdrawal_failed_interactions">-</p>
+              </div>
+              
+              <div class="total-withdrawal-gas">
+                <p class="total-withdrawal-p-b">Gas</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-withdrawal-p-double" id="total_withdrawal_gas_coin">-</p>
+                  <p class="total-withdrawal-p-double" id="total_withdrawal_gas_dollars">-</p>
+                </div>
+              </div>
+
+              <div class="total-withdrawal-failed-gas">
+                <p class="total-withdrawal-p-b">Failed Gas</p>
+                <div class="total-double-line-wrap">
+                  <p class="total-withdrawal-p-double" id="total_withdrawal_failed_gas_coin">-</p>
+                  <p class="total-withdrawal-p-double" id="total_withdrawal_failed_gas_dollars">-</p>
+                </div>
+              </div>
+
+
+              <div class="total-withdrawal-txn-date-wrap" style="border: 0;">
+
+                <div class="total-withdrawal-first-txn">
+                  <p class="total-withdrawal-p-b">First TXN</p>
+                  <div class="total-double-line-wrap">
+                    <p class="total-withdrawal-p-double" style="max-width: 100%;" id="total_withdrawal_first_txn_date_date">-</p>
+                    <p class="total-withdrawal-p-double" id="total_withdrawal_first_txn_date_days">-</p>
+                  </div>
+                </div>
+
+                <div class="total-withdrawal-last-txn">
+                  <p class="total-withdrawal-p-b">Last TXN</p>
+                  <div class="total-double-line-wrap">
+                    <p class="total-withdrawal-p-double" style="max-width: 100%;" id="total_withdrawal_last_txn_date_date">-</p>
+                    <p class="total-withdrawal-p-double" id="total_withdrawal_last_txn_date_days">-</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="total-unique-wallets">
+
+            <div class="total-unique-title">
+              <div class="win-des-tooltip">
+                <img src="images/description.svg" class="win-des-icon">
+                <p class="win-des-tooltiptext">Total unique wallets lets you see your total, withdrawal and deposited interactions with individual addreses you have transacted with in total</p>
+              </div>
+              <span id="total-unique-title">Total Unique Wallets</span>
+            </div>
+
+            <div class="total-unique-wallets-total">
+              <p class="total-unique-wallets-p">Total Total</p>
+              <div class="total-unique-scroll-div" id="total-unique-wallets-total">-</div>
+            </div>
+
+            <div class="total-unique-wallets-deposits">
+              <p class="total-unique-wallets-p">Total Deposits</p>
+                <div class="total-unique-scroll-div" id="total-unique-wallets-deposits">-</div>
+            </div>
+
+            <div class="total-unique-wallets-withdrawals">
+              <p class="total-unique-wallets-p">Total Withdrawals</p>
+              <div class="total-unique-scroll-div" id="total-unique-wallets-withdrawals">-</div>
+            </div>
+
+          </div>
+
+  
+
+        </div>
+      
+      
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+<!-- join network pop up -->
+
+<div class="join-network-m-container" id="joinWallety">
+  <div class="join-network-m">
+    <p class="join-w-close-p">
+      <button class="join-w-close" onclick="joinWpopupClose();">
+        <img class="join-w-close-img" src="images/close.svg">
+      </button>
+    </p>
+    <p class="join-w-text">Join Wallety.org</p>
+    <p class="join-w-small-text">Multi-chain web 3 analytics service for</p>
+    <p class="join-w-small-text">Chain's, NFT's, Token's and everything inbetween</p>
+    <div class="join-w-form">
+      <input class="aa" placeholder="Your Name:" id="form_name" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ab" placeholder="Your Role:" id="form_role" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ac" placeholder="Your Email:" id="form_email" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ad" placeholder="Project Name:" id="form_project" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ae" placeholder="Project Website:" id="form_website" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="af" placeholder="Mainnet / Testnet :" id="form_net" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ag" placeholder="Any Additional Comments :" id="form_comments" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+    </div>
+
+    <button onclick="sendJoinForm();" id="join-w-submit" class="join-w-submit">Submit</button>
+
+  </div>
+</div>
+
+
+<!-- tools pop up -->
+
+
+<div class="tool-container-popup" id="tools">
+  <div class="tool-bar-popup">
+
+    <p class="tool-bar-popup-close-p">
+      <button class="tool-bar-popup-close" onclick="toolBarClose();">
+        <img class="tool-bar-popup-close-img" src="images/close.svg">
+      </button>
+    </p>
+
+    <p class="tool-popup-text">Tools</p>
+    <p class="tool-popup-text-p">Download all you wallets analytics data as a CSV file and share your analytics data on Twitter, Facebook or Linkedin !</p>
+
+    <div class="tool-options-container">
+
+      <div class="tool-options-item">
+        <img class="tool-bar-option-img" src="images/download-icon.svg">
+        <p class="tool-item-title">Download</p>
+
+        <div class="tool-container">
+          <button class="tool-item" onclick="CSVdata();">CSV</button>
+        </div>
+
+      </div>
+
+      <div class="tool-options-item">
+        <img class="tool-bar-option-img" src="images/share-icon.svg">
+        <p class="tool-item-title">Share</p>
+
+        <div class="tool-container">
+          <button class="tool-item" onclick="TWITTERdata();">Twitter</button>
+          <button class="tool-item" onclick="FACEBOOKdata();">Facebook</button>
+          <button class="tool-item" onclick="LINKEDINdata();">Linkedin</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- suggest / report pop up -->
+
+<div class="suggest-container-popup" id="suggest">
+  <div class="suggest-popup">
+
+    <p class="suggest-popup-close-p">
+      <button class="suggest-popup-close" onclick="suggestClose();">
+        <img class="suggest-popup-close-img" src="images/close.svg">
+      </button>
+    </p>
+
+    <p class="suggest-popup-text">Report / Request</p>
+    <p class="suggest-popup-text-small">Want us to add somthing cool or you see a bug ?</p>
+
+    <div class="suggest-form">
+      <input class="suggest-input" placeholder="Let us know !" id="suggestion" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+
+      <button onclick="sendSuggestForm();" id="suggest-submit" class="suggest-submit">Submit</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</body>
+
+
+
+<noscript>
+
+  <style>body { display:none; }</style>
+  
+  <meta http-equiv="refresh" content="0; url=enable-javascript.html">
+  
+</noscript>
+</html>

@@ -1,0 +1,375 @@
+/* universal */
+a {
+  color: black;
+  text-decoration: 0;
+}
+
+:root {
+  --dye-a: brightness(0) invert(1);
+}
+
+
+/* body */
+
+.body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+
+
+}
+
+/* header */
+
+.header {
+    margin-top: 6px;
+    color: black;
+    height: 65px;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 5px 5px 0px lightgrey;
+    align-items: center;
+    margin: 0;
+    background-color: white;
+  }
+
+  .logo-div {
+    float: left;
+    background-color: transparent;
+    margin: 0;
+    margin-left: 10px;
+    align-items: center;
+    height: 100%;
+  }
+  .logo-icon-wrap {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    align-items: center;
+    height: 100%;
+  }
+  .logo-img {
+    height: 1.7em;
+    margin: 0;
+    margin-left: 6.5px;
+    margin-right: 4px;
+  }
+  .logo-text {
+    font-size: 2.1em;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 6px;
+    text-shadow: 2px 2px lightgrey;
+  }
+
+.dashboard-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  margin-right: 10px;
+  height: 65px;
+}
+.dashboard-bttn {
+  margin-right: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  right: 0;
+  padding: 8px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 0px 0px lightgrey;
+  font-size: 13px;
+}
+
+.dashboard-bttn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* banner */
+
+.banner {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  visibility: visible;
+}
+
+.banner-p {
+  margin: 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.banner-close-img {
+  position: absolute;
+  right: 0;
+  height: 14px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+
+/* main */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 73vh;
+}
+
+/* middle */
+
+.middle {
+  text-align: center; 
+  padding: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 60px;
+}
+
+.large-text {
+  width: 100%;
+  color: black; 
+  text-decoration: none;
+  font-size: 5em;
+  font-weight: bold;
+  text-shadow: 3px 3px lightgrey;
+  margin: 0;
+  word-break: break-word;
+}
+
+.small-text {
+  font-size: 1.3em;
+  text-shadow: 1px 1px lightgrey;
+}
+
+.social-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.social-icon-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: black;
+  border: 1px solid black;
+  margin: 10px;
+  box-shadow: 2px 2px 0px 0px lightgrey;
+}
+.social-icon-a:hover {
+  --dye-a: brightness(0) invert(0);
+  background-color: white;
+}
+
+.social-icon {
+  cursor: pointer;
+  height: 20px;
+  margin: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  filter: var(--dye-a);
+}
+
+
+/* search bar */
+
+.search-bar-div {
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+  position: relative;
+  margin-top: 15px;
+}
+
+
+.network-option {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  border-radius: 5px;
+}
+.wallet-input {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  border-radius: 5px;
+}
+.search-button {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  border-radius: 5px;
+}
+
+
+.search-bar {
+  display: flex;
+  background-color: transparent;
+  width: fit-content;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px 0px lightgrey;  
+
+}
+
+  .network-option-1 {
+  height: 41px; 
+  width: fit-content; 
+  font-family: monospace; 
+  font-size: 13px;
+  color: white; 
+  background-color: black; 
+  border-radius: 5px; 
+  text-align: center;
+  border-top-right-radius: 0px; 
+  border-bottom-right-radius: 0px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid black;
+  border-right: 0;
+  }
+.network-option-1:hover {
+  background-color: white;
+  color: black;
+}
+.wallet-input-1 {
+  font-size: 12px;
+  height: 37px;
+  width: 24vw;
+  min-width: 200px;
+  font-family: monospace;
+  color: black; 
+  background-color: white;
+  outline: none;
+  border: 1px solid black;
+}
+.search-button-1 {
+  height: 41px; 
+  width: fit-content; 
+  font-family: monospace; 
+  font-size: 13px;
+  color: white; 
+  background-color: black; 
+  border-radius: 5px; 
+  border-top-left-radius: 0px; 
+  border-bottom-left-radius: 0px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid black;
+  border-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-button-1:hover {
+  background-color: white;
+  color: black;
+}
+.search-text {
+  margin-left: 3px; 
+  margin-right: 3px;
+}
+.loading-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-gif > img {
+  margin-top: 1px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 3px; 
+  margin-right: 3px;
+}
+
+
+
+/* curve */
+
+
+ section {
+   position: relative;
+   width: 100%;
+   height: 13vh;
+   background-color: black;
+   overflow: hidden;
+ }
+
+ section .wave {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 80%;
+   background: url(images/wave.png);
+   background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+section .wave.wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .wave.wave3 {
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15;
+}
+section .wave.wave4 {
+  animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes animate {
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: 1000px;
+  }
+}
+@keyframes animate2 {
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: -1000px;
+  }
+}
+

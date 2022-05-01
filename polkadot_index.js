@@ -708,8 +708,9 @@ function FACEBOOKdata() {
 // share data on Linkedin
 function LINKEDINdata() {
     if (data_loaded == true) {    
-        const wallet_address = document.getElementById('wallet_address').value;
-        const linkedin_url_data = 'url=www.wallety.org/polkadot?wallet_address=' + wallet_address
+        // const wallet_address = document.getElementById('wallet_address').value;
+        // const linkedin_url_data = 'url=www.wallety.org/polkadot?wallet_address=' + wallet_address
+        const linkedin_url_data = 'url=www.wallety.org/polkadot'
         const linkedin_open = 'https://linkedin.com/shareArticle?' + linkedin_url_data
         window.open(linkedin_open)
     } else {alert('Please enter a wallet address or wait for the data to load')}

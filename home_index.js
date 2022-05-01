@@ -239,6 +239,7 @@ function sendSuggestForm() {
             fetch(form_url);
             document.getElementById('suggestion').value = ''
             document.getElementById('suggest-submit').innerHTML = 'Sent!'
+            document.getElementById('suggest-email').innerHTML = ''
         } else {alert('Suggestion left blank, please complete the form')}
     } else {alert('Our servers are currently down, please try again later')}
 }

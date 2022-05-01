@@ -664,6 +664,7 @@ function sendSuggestForm() {
             fetch(form_url);
             document.getElementById('suggestion').value = ''
             document.getElementById('suggest-submit').innerHTML = 'Sent!'
+            document.getElementById('suggest-email').innerHTML = ''
         } else {alert('Suggestion left blank, please complete the form')}
     } else {alert('Our servers are currently down, please try again later')}
 }
@@ -707,8 +708,8 @@ function FACEBOOKdata() {
 // share data on Linkedin
 function LINKEDINdata() {
     if (data_loaded == true) {    
-        var wallet_address = document.getElementById('wallet_address').value;
-        linkedin_url_data = 'url=www.wallety.org/kusama?wallet_address=' + wallet_address
+        const wallet_address = document.getElementById('wallet_address').value;
+        const linkedin_url_data = 'url=www.wallety.org/kusama?wallet_address=' + wallet_address
         const linkedin_open = 'https://linkedin.com/shareArticle?' + linkedin_url_data
         window.open(linkedin_open)
     } else {alert('Please enter a wallet address or wait for the data to load')}

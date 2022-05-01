@@ -88,7 +88,7 @@ function submit_entry() {
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network == 'kusama') {
-                            var api_url = 'https://wallety.org/kusama.html?wallet_address=' + wallet_address
+                            var api_url = 'https://wallety.org/kusama?wallet_address=' + wallet_address
                             location.href = api_url;}    
                         else {
                             if (checkNetworkReqResponce.wallet_network != false) {
@@ -111,7 +111,7 @@ function submit_entry() {
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network == 'polkadot') {
-                            var api_url = 'https://wallety.org/polkadot.html?wallet_address=' + wallet_address
+                            var api_url = 'https://wallety.org/polkadot?wallet_address=' + wallet_address
                             location.href = api_url;}
                         else {
                             if (checkNetworkReqResponce.wallet_network != false) {
@@ -134,10 +134,10 @@ function submit_entry() {
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network == 'polkadot') {
-                            var api_url = 'https://wallety.org/polkadot.html?wallet_address=' + wallet_address
+                            var api_url = 'https://wallety.org/polkadot?wallet_address=' + wallet_address
                             location.href = api_url;}
                         else if (checkNetworkReqResponce.wallet_network == 'kusama') {
-                            var api_url = 'https://wallety.org/kusama.html?wallet_address=' + wallet_address
+                            var api_url = 'https://wallety.org/kusama?wallet_address=' + wallet_address
                             location.href = api_url;}    
                         else {alert('Wallet address not found for the networks we support')}
                         document.getElementById('loading-gif').innerHTML = ''
@@ -689,7 +689,7 @@ function TWITTERdata() {
     if (data_loaded == true) {    
         tweet_text_data = 'Check out my Kusama wallet analytics on @WalletyOrg !\n'
         var wallet_address = document.getElementById('wallet_address').value;
-        tweet_url_data = '&url=Wallety.org/Kusama.html?Wallet_Address=' + wallet_address
+        tweet_url_data = '&url=Wallety.org/Kusama?Wallet_Address=' + wallet_address
         tweet_hashtag_data = '&hashtags=Kusama,Wallety,WalletyOrg'
         const twitter_open = 'https://twitter.com/intent/tweet?text=' + tweet_text_data + tweet_url_data + tweet_hashtag_data
         window.open(twitter_open)
@@ -699,7 +699,7 @@ function TWITTERdata() {
 function FACEBOOKdata() {
     if (data_loaded == true) { 
         var wallet_address = document.getElementById('wallet_address').value;
-        facebook_url_data = 'www.wallety.org/kusama.html?wallet_address=' + wallet_address
+        facebook_url_data = 'www.wallety.org/kusama?wallet_address=' + wallet_address
         const facebook_open = 'https://www.facebook.com/sharer/sharer.php?u=' + facebook_url_data
         window.open(facebook_open)
     } else {alert('Please enter a wallet address or wait for the data to load')}
@@ -708,7 +708,7 @@ function FACEBOOKdata() {
 function LINKEDINdata() {
     if (data_loaded == true) {    
         var wallet_address = document.getElementById('wallet_address').value;
-        linkedin_url_data = 'url=www.wallety.org/kusama.html?wallet_address=' + wallet_address
+        linkedin_url_data = 'url=www.wallety.org/kusama?wallet_address=' + wallet_address
         const linkedin_open = 'https://linkedin.com/shareArticle?' + linkedin_url_data
         window.open(linkedin_open)
     } else {alert('Please enter a wallet address or wait for the data to load')}

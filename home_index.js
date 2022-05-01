@@ -85,7 +85,7 @@ function submit_entry() {
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network == 'kusama') {
-                            var api_url = 'https://wallety.org/kusama.html?wallet_address=' + wallet_address
+                            var api_url = 'https://wallety.org/kusama?wallet_address=' + wallet_address
                             location.href = api_url;}    
                         else {
                             if (checkNetworkReqResponce.wallet_network != false) {
@@ -108,7 +108,7 @@ function submit_entry() {
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network == 'polkadot') {
-                            var api_url = 'https://wallety.org/polkadot.html?wallet_address=' + wallet_address
+                            var api_url = 'https://wallety.org/polkadot?wallet_address=' + wallet_address
                             location.href = api_url;}
                         else {
                             if (checkNetworkReqResponce.wallet_network != false) {
@@ -131,10 +131,10 @@ function submit_entry() {
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network == 'polkadot') {
-                            var api_url = 'https://wallety.org/polkadot.html?wallet_address=' + wallet_address
+                            var api_url = 'https://wallety.org/polkadot?wallet_address=' + wallet_address
                             location.href = api_url;}
                         else if (checkNetworkReqResponce.wallet_network == 'kusama') {
-                            var api_url = 'https://wallety.org/kusama.html?wallet_address=' + wallet_address
+                            var api_url = 'https://wallety.org/kusama?wallet_address=' + wallet_address
                             location.href = api_url;}    
                         else {alert('Wallet address not found for the networks we support')}
                         document.getElementById('loading-gif').innerHTML = ''

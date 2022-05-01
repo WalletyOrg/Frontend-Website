@@ -1191,21 +1191,62 @@ section .wave.wave4 {
 }
 .suggest-form {
   margin-bottom: 10px;
+  margin-top: 15px;
   text-align: center;
-  justify-content: center;
-  width: 100%;
+  align-items: center;
+  width: 88%;
+  padding-left: 6%;
+  padding-right: 6%;
 }
+.suggest-top-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+.suggest-bttn-toggle-cont {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.suggest-bttn-toggle {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-family: monospace;
+}
+.suggest-bttn-toggle:hover {
+  background-color: black;
+  color: white;
+}
+.suggest-input-top {
+  width: 70%;
+  background-color: white;
+  padding: 10px;
+  outline: none;
+  font-family: monospace;
+  word-break: break-all;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.suggest-bottom-cont {
+  width: 99.7%;
+}
+
 .suggest-input {
-  max-width: 90%;
-  width: 500px;
+  width: 95%;
   border: 1px solid black;
   padding: 10px;
-  margin: 10px;
+  padding-left: 2.5%;
+  padding-right: 2.55%;
   border-radius: 5px;
   outline: none;
   font-family: monospace;
-  margin-left: 0;
-  margin-right: 0;
   word-break: break-all;
 }
 .suggest-submit {

@@ -269,12 +269,12 @@
     <p class="join-w-small-text">Chain's, NFT's, Token's and everything inbetween</p>
     <div class="join-w-form">
       <input class="aa" placeholder="Your Name:" id="form_name" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
-      <input class="ab" placeholder="Your Role:" id="form_role" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
-      <input class="ac" placeholder="Your Email:" id="form_email" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
-      <input class="ad" placeholder="Project Name:" id="form_project" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
-      <input class="ae" placeholder="Project Website:" id="form_website" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
-      <input class="af" placeholder="Mainnet / Testnet :" id="form_net" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
-      <input class="ag" placeholder="Any Additional Comments :" id="form_comments" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
+      <input class="ab" placeholder="Your Role:" id="form_role" type="text/number/something-other-than-password" name="x-field-2" autocomplete="new-field-2">
+      <input class="ac" placeholder="Your Email:" id="form_email" type="text/number/something-other-than-password" name="x-field-3" autocomplete="new-field-3">
+      <input class="ad" placeholder="Project Name:" id="form_project" type="text/number/something-other-than-password" name="x-field-4" autocomplete="new-field-4">
+      <input class="ae" placeholder="Project Website:" id="form_website" type="text/number/something-other-than-password" name="x-field-5" autocomplete="new-field-5">
+      <input class="af" placeholder="Mainnet / Testnet :" id="form_net" type="text/number/something-other-than-password" name="x-field-6" autocomplete="new-field-6">
+      <input class="ag" placeholder="Any Additional Comments :" id="form_comments" type="text/number/something-other-than-password" name="x-field-7" autocomplete="new-field-7">
     </div>
 
     <button onclick="sendJoinForm();" id="join-w-submit" class="join-w-submit">Submit</button>
@@ -342,9 +342,25 @@
     <p class="suggest-popup-text-small">Want us to add somthing cool or you see a bug ?</p>
 
     <div class="suggest-form">
-      <input class="suggest-input" placeholder="Let us know !" id="suggestion" type="text/number/something-other-than-password" name="x-field-1" autocomplete="new-field-1">
 
-      <button onclick="sendSuggestForm();" id="suggest-submit" class="suggest-submit">Submit</button>
+
+      <div class="suggest-top-div">
+        <div class="suggest-bttn-toggle-cont">
+          <button onclick="report_req_suggest_bttn();" id="bug-bttn" style="width: 35%;" class="suggest-bttn-toggle">Bug</button>
+          <button onclick="report_req_bug_bttn();" id="suggest-bttn" style="width: 66%; margin-left: 4%; background-color: black; color: white;" class="suggest-bttn-toggle">Suggestion</button>
+        </div>
+        <input id="suggest-email" class="suggest-input-top" placeholder="Email (Optional)" type="text/number/something-other-than-password" name="x-field-email" autocomplete="x-field-email">
+      </div>
+
+
+      <div class="suggest-bottom-cont">
+        <input class="suggest-input" placeholder="Let us know !" id="suggestion" type="text/number/something-other-than-password" name="x-field-suggest" autocomplete="x-field-suggest">
+
+        <button onclick="sendSuggestForm();" id="suggest-submit" class="suggest-submit">Submit</button>
+      </div>
+
+
+
     </div>
 
   </div>

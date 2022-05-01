@@ -203,6 +203,8 @@ async function sendJoinForm() {
 
 
 
+
+
 // suggest pop up
 function suggestOpen() {
     if (servers_alive == true) {
@@ -213,15 +215,25 @@ function suggestOpen() {
 function suggestClose() {
     document.getElementById("suggest").style.display = "none";
 }
+
+
 // suggest form
 function sendSuggestForm() {
     if (servers_alive == true) {
 
         var suggestion = document.getElementById('suggestion').value
         var suggestion_network = 'Home'
+        var suggest_email = document.getElementById('suggest-email').value
+        if (suggest_email == '') {suggest_email = false}
+
+        var suggest_bug = document.getElementById('bug-bttn')
+        if (suggest_bug.style.backgroundColor == 'black') {
+            var suggest_value = 'Bug'
+        } else var suggest_value = 'Suggestion'
+
         if(suggestion){
 
-            var form_url = 'https://api.polkadot.wallety.org/suggestion/?suggestion=' + suggestion + '&network=' + suggestion_network
+            var form_url = 'https://api.polkadot.wallety.org/suggestion/?suggestion=' + suggestion + '&network=' + suggestion_network + '&suggest_type=' + suggest_value + '&suggest_email=' + suggest_email
 
 
             fetch(form_url);
@@ -230,4 +242,15 @@ function sendSuggestForm() {
         } else {alert('Suggestion left blank, please complete the form')}
     } else {alert('Our servers are currently down, please try again later')}
 }
-
+function report_req_suggest_bttn() {
+    document.getElementById('suggest-bttn').style.color = 'black'
+    document.getElementById('suggest-bttn').style.backgroundColor = 'white'
+    document.getElementById('bug-bttn').style.color = 'white'
+    document.getElementById('bug-bttn').style.backgroundColor = 'black'
+}
+function report_req_bug_bttn() {
+    document.getElementById('bug-bttn').style.color = 'black'
+    document.getElementById('bug-bttn').style.backgroundColor = 'white'
+    document.getElementById('suggest-bttn').style.color = 'white'
+    document.getElementById('suggest-bttn').style.backgroundColor = 'black'
+}

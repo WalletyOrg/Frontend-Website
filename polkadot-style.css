@@ -2623,7 +2623,7 @@ background-color: transparent;
   width: 100vw;
   align-items: center;
   text-align: center;
-  /* display: none; */
+  display: none;
 }
 .tool-bar-popup {
   margin: 0 auto;

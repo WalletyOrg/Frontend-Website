@@ -941,6 +941,14 @@ section .wave.wave4 {
   text-shadow: 2px 2px lightgrey;
   margin-top: 0;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.join-w-img {
+  height: 23px;
+  margin-right: 15px;
+  margin-bottom: 2px;
 }
 .join-w-small-text {
   font-size: 14px;
@@ -1080,6 +1088,13 @@ section .wave.wave4 {
   text-shadow: 2px 2px lightgrey;
   margin-top: 0;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.suggest-window-img {
+  height: 28px;
+  margin-right: 15px;
 }
 .suggest-popup-text-small {
   font-size: 14px;
@@ -1213,6 +1228,13 @@ section .wave.wave4 {
   text-shadow: 2px 2px lightgrey;
   margin-top: 0;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.API-window-img {
+  height: 28px;
+  margin-right: 15px;
 }
 .API-popup-text-small {
   font-size: 14px;

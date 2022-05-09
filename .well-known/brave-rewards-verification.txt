@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: wallety.org
+Token: 8c9bb3271432435705d54f7f2887f9adaf3790cf7f396cf19c95afd36cfde4f1

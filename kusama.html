@@ -61,6 +61,13 @@
         <span class="suggest-p" style="margin-top: 4.1px;">Report/Request</span>
       </button>
 
+      <button onclick="APIOpen();" class="suggest">
+        <span class="suggest-img-container">
+          <img class="suggest-img" src="images/api.svg">
+        </span>
+        <span class="suggest-p" style="margin-top: 4.1px;">Developer API</span>
+      </button>
+
 
       <div class="bottom-aside">
 
@@ -878,7 +885,6 @@
 
 
 <!-- join network pop up -->
-
 <div class="join-network-m-container" id="joinWallety">
   <div class="join-network-m">
     <p class="join-w-close-p">
@@ -898,47 +904,37 @@
       <input class="af" placeholder="Mainnet / Testnet :" id="form_net" type="text/number/something-other-than-password" name="x-field-6" autocomplete="new-field-6">
       <input class="ag" placeholder="Any Additional Comments :" id="form_comments" type="text/number/something-other-than-password" name="x-field-7" autocomplete="new-field-7">
     </div>
-
     <button onclick="sendJoinForm();" id="join-w-submit" class="join-w-submit">Submit</button>
-
   </div>
 </div>
 
 
+
+
 <!-- tools pop up -->
-
-
 <div class="tool-container-popup" id="tools">
   <div class="tool-bar-popup">
-
     <p class="tool-bar-popup-close-p">
       <button class="tool-bar-popup-close" onclick="toolBarClose();">
         <img class="tool-bar-popup-close-img" src="images/close.svg">
       </button>
     </p>
-
     <p class="tool-popup-text">Tools</p>
     <p class="tool-popup-text-p">Download all your wallets analytics data as a CSV file and share your analytics data on Twitter, Facebook or Linkedin !</p>
-
     <div class="tool-options-container">
-
       <div class="tool-options-item">
         <img class="tool-bar-option-img" src="images/download-icon.svg">
         <p class="tool-item-title">Download</p>
-
         <div class="tool-container">
           <button class="CSVhover" onclick="CSVdata();">
             <img class="tool-item-img" src="images/file.svg">
             <span>CSV</span>
           </button>
         </div>
-
       </div>
-
       <div class="tool-options-item">
         <img class="tool-bar-option-img" src="images/share-icon.svg">
         <p class="tool-item-title">Share</p>
-
         <div class="tool-container">
           <button style="background-color: #00acee;" class="tool-item" onclick="TWITTERdata();">
             <img class="tool-item-img" src="images/twitter.svg">
@@ -953,32 +949,23 @@
             <span>Linkedin</span>
           </button>
         </div>
-
       </div>
-
     </div>
-
   </div>
 </div>
 
 
 <!-- suggest / report pop up -->
-
 <div class="suggest-container-popup" id="suggest">
   <div class="suggest-popup">
-
     <p class="suggest-popup-close-p">
       <button class="suggest-popup-close" onclick="suggestClose();">
         <img class="suggest-popup-close-img" src="images/close.svg">
       </button>
     </p>
-
     <p class="suggest-popup-text">Report / Request</p>
     <p class="suggest-popup-text-small">Want us to add something cool or you see a bug ?</p>
-
     <div class="suggest-form">
-
-
       <div class="suggest-top-div">
         <div class="suggest-bttn-toggle-cont">
           <button onclick="report_req_suggest_bttn();" id="bug-bttn" style="width: 35%;" class="suggest-bttn-toggle">Bug</button>
@@ -986,32 +973,49 @@
         </div>
         <input id="suggest-email" class="suggest-input-top" placeholder="Email (Optional)" type="text/number/something-other-than-password" name="x-field-email" autocomplete="x-field-email">
       </div>
-
-
       <div class="suggest-bottom-cont">
         <input class="suggest-input" placeholder="Let us know !" id="suggestion" type="text/number/something-other-than-password" name="x-field-suggest" autocomplete="x-field-suggest">
-
         <button onclick="sendSuggestForm();" id="suggest-submit" class="suggest-submit">Submit</button>
       </div>
-
-
     </div>
+  </div>
+</div>
 
+
+<!-- API pop up -->
+<div class="API-container-popup" id="API">
+  <div class="API-popup">
+    <p class="API-popup-close-p">
+      <button class="API-popup-close" onclick="APIClose();">
+        <img class="API-popup-close-img" src="images/close.svg">
+      </button>
+    </p>
+    <p class="API-popup-text">Developer API</p>
+    <p class="API-popup-text-small">Apply to our API waitlist, we will ping you when its live!</p>
+    <div class="API-form">
+      <div class="API-w-form">
+        <div class="API-form-input-div">
+          <input class="API-input" placeholder="Your Name:" id="API_name" type="text/number/something-other-than-password" name="x-field-A1" autocomplete="new-field-A1">
+          <input class="API-input" placeholder="Your Email:" id="API_email" type="text/number/something-other-than-password" name="x-field-A2" autocomplete="new-field-A2">
+        </div>
+        <div class="API-form-input-div">
+          <input class="API-input" placeholder="Any Additional Comments :" id="API_comments" type="text/number/something-other-than-password" name="x-field-A3" autocomplete="new-field-A3">
+        </div>
+      </div>
+      <div>
+        <button onclick="sendAPIForm();" class="API-submit" id="API_submit">Submit</button>
+      </div>
+    </div>
   </div>
 </div>
 
 
 
 
+
 </body>
-
-
-
 <noscript>
-
   <style>body { display:none; }</style>
-  
   <meta http-equiv="refresh" content="0; url=enable-javascript.html">
-  
 </noscript>
 </html>

@@ -2605,6 +2605,7 @@ background-color: transparent;
   cursor: pointer;
   padding: 8px;
   font-family: monospace;
+  box-shadow: 3px 3px 0px 0px lightgrey;
 }
 .join-w-submit:hover {
   background-color: white;
@@ -2906,6 +2907,7 @@ background-color: transparent;
   cursor: pointer;
   padding: 8px;
   font-family: monospace;
+  box-shadow: 3px 3px 0px 0px lightgrey;
 }
 .suggest-submit:hover {
   background-color: white;
@@ -2913,9 +2915,111 @@ background-color: transparent;
 }
 
 
+/* API pop up */
+.API-container-popup {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+.API-popup {
+  margin: 0 auto;
+  margin-top: 12%;
+  background-color: white;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.API-popup-close-p {
+  width: 100%;
+  margin: 0;
+  text-align: right;
+  align-items: center;
+  font-family: monospace;
+  height: 25px;
+}
+.API-popup-close {
+  background-color: white;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  height: 25px;
+  width: 25px;
+  margin: 0;
+}
+.API-popup-text {
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px lightgrey;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.API-popup-text-small {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.API-form {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  text-align: center;
+  align-items: center;
+  width: 88%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+.API-form-input-div {
+  width: 100%;
+  margin: 0;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+.API-input {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  font-family: monospace;
+  width: 100%;
+}
+.API-submit {
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+  background-color: black;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  padding: 8px;
+  font-family: monospace;
+  box-shadow: 3px 3px 0px 0px lightgrey;
+
+}
+.API-submit:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+
+
+
 /* window descriptions  */
-
-
 .win-des-icon {
   height: 15px;
   border-radius: 50%;

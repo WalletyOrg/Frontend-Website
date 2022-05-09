@@ -203,8 +203,6 @@ async function sendJoinForm() {
 
 
 
-
-
 // suggest pop up
 function suggestOpen() {
     if (servers_alive == true) {
@@ -215,8 +213,6 @@ function suggestOpen() {
 function suggestClose() {
     document.getElementById("suggest").style.display = "none";
 }
-
-
 // suggest form
 function sendSuggestForm() {
     if (servers_alive == true) {
@@ -241,6 +237,51 @@ function sendSuggestForm() {
             document.getElementById('suggest-submit').innerHTML = 'Sent!'
             document.getElementById('suggest-email').value = ''
         } else {alert('Suggestion left blank, please complete the form')}
+    } else {alert('Our servers are currently down, please try again later')}
+}
+function report_req_suggest_bttn() {
+    document.getElementById('suggest-bttn').style.color = 'black'
+    document.getElementById('suggest-bttn').style.backgroundColor = 'white'
+    document.getElementById('bug-bttn').style.color = 'white'
+    document.getElementById('bug-bttn').style.backgroundColor = 'black'
+}
+function report_req_bug_bttn() {
+    document.getElementById('bug-bttn').style.color = 'black'
+    document.getElementById('bug-bttn').style.backgroundColor = 'white'
+    document.getElementById('suggest-bttn').style.color = 'white'
+    document.getElementById('suggest-bttn').style.backgroundColor = 'black'
+}
+
+
+
+// API pop up
+function APIOpen() {
+    if (servers_alive == true) {
+        document.getElementById("API").style.display = "block";
+        document.getElementById('API_submit').innerHTML = 'Submit'
+    } else {alert('Our servers are currently down, please try again later')}
+}
+function APIClose() {
+    document.getElementById("API").style.display = "none";
+}
+// API form
+function sendAPIForm() {
+    if (servers_alive == true) {
+
+        var API_name = document.getElementById('API_name').value
+        var API_email = document.getElementById('API_email').value
+        var API_comments = document.getElementById('API_comments').value
+
+        if(API_name && API_email){
+
+            var form_url = 'https://api.polkadot.wallety.org/api_apply/?name=' + API_name + '&email=' + API_email + '&comments=' + API_comments
+
+            fetch(form_url);
+            document.getElementById('API_name').value = ''
+            document.getElementById('API_email').value = ''
+            document.getElementById('API_comments').value = ''
+            document.getElementById('API_submit').innerHTML = 'Sent!'
+        } else {alert('Input left blank, please complete the form')}
     } else {alert('Our servers are currently down, please try again later')}
 }
 function report_req_suggest_bttn() {

@@ -182,7 +182,6 @@ async function polkadot() {
     const responce = await fetch(api_url);
     data = await responce.json();
 
-    console.log(data)
 
     function displayData() {
         // general data

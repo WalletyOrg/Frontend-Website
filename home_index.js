@@ -213,6 +213,7 @@ function suggestOpen() {
 function suggestClose() {
     document.getElementById("suggest").style.display = "none";
 }
+
 // suggest form
 function sendSuggestForm() {
     if (servers_alive == true) {

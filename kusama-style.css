@@ -2890,10 +2890,6 @@ background-color: transparent;
   padding: 10px;
   font-family: monospace;
 }
-.suggest-bttn-toggle:hover {
-  background-color: black;
-  color: white;
-}
 .suggest-input-top {
   width: 70%;
   background-color: white;

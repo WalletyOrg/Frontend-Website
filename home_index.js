@@ -163,10 +163,8 @@ document.getElementById("wallet_address")
 
 // join wallety pop up
 function joinWpopupOpen() {
-    if (servers_alive == true) {
-        document.getElementById("joinWallety").style.display = "block";
-        document.getElementById('join-w-submit').innerHTML = 'Submit'
-    } else {alert('Our servers are currently down, please try again later')}
+    document.getElementById("joinWallety").style.display = "block";
+    document.getElementById('join-w-submit').innerHTML = 'Submit'
 }
 function joinWpopupClose() {
     document.getElementById("joinWallety").style.display = "none";
@@ -205,10 +203,8 @@ async function sendJoinForm() {
 
 // suggest pop up
 function suggestOpen() {
-    if (servers_alive == true) {
-        document.getElementById("suggest").style.display = "block";
-        document.getElementById('suggest-submit').innerHTML = 'Submit'
-    } else {alert('Our servers are currently down, please try again later')}
+    document.getElementById("suggest").style.display = "block";
+    document.getElementById('suggest-submit').innerHTML = 'Submit'
 }
 function suggestClose() {
     document.getElementById("suggest").style.display = "none";
@@ -257,10 +253,8 @@ function report_req_bug_bttn() {
 
 // API pop up
 function APIOpen() {
-    if (servers_alive == true) {
-        document.getElementById("API").style.display = "block";
-        document.getElementById('API_submit').innerHTML = 'Submit'
-    } else {alert('Our servers are currently down, please try again later')}
+    document.getElementById("API").style.display = "block";
+    document.getElementById('API_submit').innerHTML = 'Submit'
 }
 function APIClose() {
     document.getElementById("API").style.display = "none";

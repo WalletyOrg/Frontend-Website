@@ -298,6 +298,14 @@ async function polkadot() {
 
         display_name = data.polkadot_wallet_profile.wallet_profile.wallet_profile.display_name
         document.getElementById('display_name').innerHTML = display_name;
+
+        // identicon
+        var identicon = document.createElement("polkadot-web-identicon");
+        identicon.address = key;
+        identicon.theme = 'polkadot';
+        identicon.size = '30'
+        document.getElementById('indenticon-span').appendChild(identicon);
+
         legal_name = data.polkadot_wallet_profile.wallet_profile.wallet_profile.legal_name
         document.getElementById('legal_name').innerHTML = legal_name;
         index = data.polkadot_wallet_profile.wallet_profile.wallet_profile.account_index

@@ -1,0 +1,22 @@
+{
+  "name": "wallety",
+  "version": "1.0.0",
+  "description": "multi-chain web 3 analytics service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WalletyOrg/Frontend-Website.git"
+  },
+  "author": "Lorimer Jenkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WalletyOrg/Frontend-Website/issues"
+  },
+  "homepage": "https://github.com/WalletyOrg/Frontend-Website#readme",
+  "dependencies": {
+    "polkadot-web-identicon": "^1.0.5-rc2"
+  }
+}

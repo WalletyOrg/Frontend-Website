@@ -1,6 +1,8 @@
 // // dev after
-// document.getElementById('loading-screen').style.visibility = 'hidden'
-// document.getElementById('main').style.visibility = 'visible'
+document.getElementById('loading-screen').style.visibility = 'hidden'
+document.getElementById('main').style.visibility = 'visible'
+
+
 
 servers_alive = false
 // main server alive check
@@ -212,6 +214,8 @@ async function kusama() {
             r.style.setProperty('--middle-tool-text-img-rotate', '180deg');
         }
 
+        
+
         // profile
         // display name img judgement_img
         var judgementImg = ''
@@ -299,6 +303,14 @@ async function kusama() {
 
         display_name = data.kusama_wallet_profile.wallet_profile.wallet_profile.display_name
         document.getElementById('display_name').innerHTML = display_name;
+
+        // identicon
+        var identicon = document.createElement("polkadot-web-identicon");
+        identicon.address = key;
+        identicon.theme = 'polkadot';
+        identicon.size = '30'
+        document.getElementById('indenticon-span').appendChild(identicon);
+
         legal_name = data.kusama_wallet_profile.wallet_profile.wallet_profile.legal_name
         document.getElementById('legal_name').innerHTML = legal_name;
         index = data.kusama_wallet_profile.wallet_profile.wallet_profile.account_index

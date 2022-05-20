@@ -1,6 +1,6 @@
-// // dev after
-document.getElementById('loading-screen').style.visibility = 'hidden'
-document.getElementById('main').style.visibility = 'visible'
+// // // dev after
+// document.getElementById('loading-screen').style.visibility = 'hidden'
+// document.getElementById('main').style.visibility = 'visible'
 
 
 

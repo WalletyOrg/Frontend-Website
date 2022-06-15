@@ -134,7 +134,7 @@ a {
   padding: 30px;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .large-text {
@@ -299,6 +299,40 @@ a {
   border-radius: 50%;
   margin-left: 3px; 
   margin-right: 3px;
+}
+
+
+/* demo button */
+.demo-bttn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.demo-bttn {
+  font-size: 15px;
+  background-color: black;
+  margin: 5px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: white;
+  box-shadow: 2px 2px 0px 0px lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  --demo-img-dye: brightness(0) invert(1);
+}
+.demo-bttn:hover {
+  color: black;
+  background-color: white;
+  --demo-img-dye: brightness(0) invert(0);
+}
+.demo-img {
+  padding-left: 5px;
+  height: 16px;
+  filter: var(--demo-img-dye);
 }
 
 

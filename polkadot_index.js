@@ -561,7 +561,7 @@ async function polkadot() {
     if (data.wallety_org_polkadot_server_status == 200){displayData()}
     else {
         document.getElementById('loading-gif').innerHTML = ''
-        alert('Hmm somthing went wrong, please try again later')
+        alert('Hmm something went wrong, please try again later')
         window.location = window.location.href.split("?")[0];
     }
 }

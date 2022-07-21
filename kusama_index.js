@@ -94,7 +94,7 @@ function submit_entry() {
                             location.href = api_url;}    
                         else {
                             if (checkNetworkReqResponce.wallet_network.network != false) {
-                                var alert_text = 'Kusama wallet address not found, this is a ' + checkNetworkReqResponce.wallet_network.wallet_address + ' wallet address'
+                                var alert_text = 'Kusama wallet address not found, this is a ' + checkNetworkReqResponce.wallet_network.network + ' wallet address'
                                 alert(alert_text)
                             } else {alert('Kusama wallet address not found or any matching networks we support')}
                         }
@@ -117,7 +117,7 @@ function submit_entry() {
                             location.href = api_url;}
                         else {
                             if (checkNetworkReqResponce.wallet_network.network != false) {
-                                var alert_text = 'Polkadot wallet address not found, this is a ' + checkNetworkReqResponce.wallet_network.wallet_address + ' wallet address'
+                                var alert_text = 'Polkadot wallet address not found, this is a ' + checkNetworkReqResponce.wallet_network.network + ' wallet address'
                                 alert(alert_text)
                             } else {alert('Polkadot wallet address not found or any matching networks we support')}
                         }

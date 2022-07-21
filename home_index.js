@@ -84,12 +84,12 @@ function submit_entry() {
                         var api_url = 'https://api.kusama.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=kusama'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
-                        if (checkNetworkReqResponce.wallet_network == 'kusama') {
-                            var api_url = 'https://wallety.org/kusama?wallet_address=' + wallet_address
+                        if (checkNetworkReqResponce.wallet_network.network == 'kusama') {
+                            var api_url = 'https://wallety.org/kusama?wallet_address=' + checkNetworkReqResponce.wallet_network.wallet_address
                             location.href = api_url;}    
                         else {
-                            if (checkNetworkReqResponce.wallet_network != false) {
-                                var alert_text = 'Kusama wallet address not found, this is a ' + checkNetworkReqResponce.wallet_network + ' wallet address'
+                            if (checkNetworkReqResponce.wallet_network.network != false) {
+                                var alert_text = 'Kusama wallet address not found, this is a ' + checkNetworkReqResponce.wallet_network.wallet_address + ' wallet address'
                                 alert(alert_text)
                             } else {alert('Kusama wallet address not found or any matching networks we support')}
                         }
@@ -104,15 +104,15 @@ function submit_entry() {
                         loading_img.src = 'images/loading.gif';
                         var loading_span = document.getElementById("loading-gif");
                         loading_span.appendChild(loading_img);
-                        var api_url = 'https://api.polkadot.wallety.org/walletcheck/?wallet_address=' + wallet_address
+                        var api_url = 'https://api.polkadot.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=polkadot'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
-                        if (checkNetworkReqResponce.wallet_network == 'polkadot') {
-                            var api_url = 'https://wallety.org/polkadot?wallet_address=' + wallet_address + '&specified_network=polkadot'
+                        if (checkNetworkReqResponce.wallet_network.network == 'polkadot') {
+                            var api_url = 'https://wallety.org/polkadot?wallet_address=' + checkNetworkReqResponce.wallet_network.wallet_address
                             location.href = api_url;}
                         else {
-                            if (checkNetworkReqResponce.wallet_network != false) {
-                                var alert_text = 'Polkadot wallet address not found, this is a ' + checkNetworkReqResponce.wallet_network + ' wallet address'
+                            if (checkNetworkReqResponce.wallet_network.network != false) {
+                                var alert_text = 'Polkadot wallet address not found, this is a ' + checkNetworkReqResponce.wallet_network.wallet_address + ' wallet address'
                                 alert(alert_text)
                             } else {alert('Polkadot wallet address not found or any matching networks we support')}
                         }
@@ -127,14 +127,14 @@ function submit_entry() {
                         loading_img.src = 'images/loading.gif';
                         var loading_span = document.getElementById("loading-gif");
                         loading_span.appendChild(loading_img);
-                        var api_url = 'https://api.kusama.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=all'
+                        var api_url = 'https://api.polkadot.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=all'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
-                        if (checkNetworkReqResponce.wallet_network == 'polkadot') {
-                            var api_url = 'https://wallety.org/polkadot?wallet_address=' + wallet_address
+                        if (checkNetworkReqResponce.wallet_network.network == 'polkadot') {
+                            var api_url = 'https://wallety.org/polkadot?wallet_address=' + checkNetworkReqResponce.wallet_network.wallet_address
                             location.href = api_url;}
-                        else if (checkNetworkReqResponce.wallet_network == 'kusama') {
-                            var api_url = 'https://wallety.org/kusama?wallet_address=' + wallet_address
+                        else if (checkNetworkReqResponce.wallet_network.network == 'kusama') {
+                            var api_url = 'https://wallety.org/kusama?wallet_address=' + checkNetworkReqResponce.wallet_network.wallet_address
                             location.href = api_url;}    
                         else {alert('Wallet address not found for the networks we support')}
                         document.getElementById('loading-gif').innerHTML = ''

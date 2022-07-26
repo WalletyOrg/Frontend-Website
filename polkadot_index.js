@@ -587,15 +587,38 @@ if (wallet_address_TF != null ){
     polkadot();
 }
 
-// wallet key
-function copy_key() {
-    var wallet_address = document.getElementById('wallet_address').value;
-    navigator.clipboard.writeText(wallet_address);
-    document.getElementById('tool-tip-wallet-key').innerHTML = 'Copied!';
+
+
+// wallet key polkadot
+function copy_key_polkadot() {
+    navigator.clipboard.writeText(polkadot_address);
+    document.getElementById('polkadot_wallet_address').innerHTML = 'Copied!';
     }
-function copy_key_reset() {
-    document.getElementById('tool-tip-wallet-key').innerHTML = key + ' Click to copy';
+function copy_key_reset_polkadot() {
+    document.getElementById('polkadot_wallet_address').innerHTML = polkadot_address + ' Click to copy';
 }
+// wallet key kusama
+function copy_key_kusama() {
+    navigator.clipboard.writeText(kusama_address);
+    document.getElementById('kusama_wallet_address').innerHTML = 'Copied!';
+    }
+function copy_key_reset_kusama() {
+    document.getElementById('kusama_wallet_address').innerHTML = kusama_address + ' Click to copy';
+}
+
+
+// wallety links
+// kusama wallety link
+function kusama_wallety_link() {
+    window.open('https://wallety.org/kusama?wallet_address=' + kusama_address)
+}
+// polkadot wallety link
+function polkadot_wallety_link() {
+    window.open('https://wallety.org/polkadot?wallet_address=' + polkadot_address)
+}
+
+
+
 
 // join wallety pop up
 function joinWpopupOpen() {

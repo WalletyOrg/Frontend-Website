@@ -308,9 +308,55 @@
                   </div>
 
 
-                  <div onmouseover="copy_key_reset();" class="key-tooltip" id="key-tooltip">
-                    <span class="socials-a" class="wallet-key-span" id="wallet-key" onclick="copy_key();"></span>
-                    <span id="tool-tip-wallet-key" class="key-tooltiptext" onclick="copy_key();"></span>
+                  <div class="key-tooltip" id="key-tooltip">
+                    <span class="socials-a" class="wallet-key-span" id="wallet-key"></span>
+                  
+
+                    <span id="tool-tip-wallet-key" class="key-tooltiptext">
+                      
+                      <span style="background-color: #e6007a;" class="network_address">
+                        <div class="network_container">
+                          <span class="network_address_img_container">
+                            <img style="height: 17px;" src="images/polkadot.svg">
+                          </span>
+                        </div>
+                        <div class="network_key_text">Polkadot</div>
+                        <span class="network_key_icons">
+                          <span class="wallety_network_key_container" onclick="polkadot_wallety_link()">
+                            <img style="height: 12px; border-radius: 50%;" src="images/favion.png">
+                          </span>
+                          <div class="network_key_container_polkadot" onmouseover="copy_key_reset_polkadot();">
+                            <span class="key_a_polkadot" onclick="copy_key_polkadot()">
+                              <img style="height: 12px;" src="images/key.svg">
+                            </span>
+                            <span class="key_tooltip_copy_polkadot" id="polkadot_wallet_address"  onclick="copy_key_polkadot()"></span>
+                          </div>
+                        </span>
+                      </span>
+
+                      <span style="background-color: black;" class="network_address">
+                        <div class="network_container">
+                          <span class="network_address_img_container">
+                            <img style="height: 12px;" src="images/kusama.svg">
+                          </span>
+                        </div>
+                        <div class="network_key_text">Kusama</div>
+                        <span class="network_key_icons">
+                          <span class="wallety_network_key_container" onclick="kusama_wallety_link()">
+                            <img style="height: 12px; border-radius: 50%;" src="images/favion.png">
+                          </span>
+                          <div class="network_key_container_kusama" onmouseover="copy_key_reset_kusama();">
+                            <span class="key_a_kusama" onclick="copy_key_kusama()">
+                              <img style="height: 12px;" src="images/key.svg">
+                            </span>
+                            <span class="key_tooltip_copy_kusama" id="kusama_wallet_address"  onclick="copy_key_kusama()"></span>
+                          </div>
+                        </span>
+                      </span>
+                    
+                    </span>
+
+
                   </div>
 
                 </div>

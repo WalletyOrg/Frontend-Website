@@ -290,17 +290,32 @@ async function kusama() {
             img.src = 'images/element.svg';
             document.getElementById('element-tooltip').style.display = 'inline-block'
             wallet_element.appendChild(img);} else {element = '-'}
+            
+
+
+        
+        // network keys
         document.getElementById('wallet-key').innerHTML = "";
         const wallet_key = document.getElementById("wallet-key");
+
         key = data.kusama_wallet_address
+        kusama_address = data.kusama_wallet_profile.wallet_profile.wallet_profile.kusama_address
+        polkadot_address = data.kusama_wallet_profile.wallet_profile.wallet_profile.polkadot_address
+
+
         if (key != '') {
             var img = document.createElement("img");
             img.src = 'images/key.svg';
             img.style.marginLeft = '3px'
             img.style.marginRight = '2.5px'
             wallet_key.appendChild(img);
+
             document.getElementById('key-tooltip').style.display = 'inline-block'
             document.getElementById('tool-tip-wallet-key').innerHTML = key + '\nClick to copy';}
+
+        
+
+        
 
         display_name = data.kusama_wallet_profile.wallet_profile.wallet_profile.display_name
         document.getElementById('display_name').innerHTML = display_name;
@@ -579,15 +594,38 @@ if (wallet_address_TF != null ){
     kusama();
 }
 
-// wallet key
-function copy_key() {
-    var wallet_address = document.getElementById('wallet_address').value;
-    navigator.clipboard.writeText(wallet_address);
-    document.getElementById('tool-tip-wallet-key').innerHTML = 'Copied!';
+
+
+// wallet key polkadot
+function copy_key_polkadot() {
+    navigator.clipboard.writeText(polkadot_address);
+    document.getElementById('polkadot_wallet_address').innerHTML = 'Copied!';
     }
-function copy_key_reset() {
-    document.getElementById('tool-tip-wallet-key').innerHTML = key + ' Click to copy';
+function copy_key_reset_polkadot() {
+    document.getElementById('polkadot_wallet_address').innerHTML = polkadot_address + ' Click to copy';
 }
+// wallet key kusama
+function copy_key_kusama() {
+    navigator.clipboard.writeText(kusama_address);
+    document.getElementById('kusama_wallet_address').innerHTML = 'Copied!';
+    }
+function copy_key_reset_kusama() {
+    document.getElementById('kusama_wallet_address').innerHTML = kusama_address + ' Click to copy';
+}
+
+
+// wallety links
+// kusama wallety link
+function kusama_wallety_link() {
+    window.open('https://wallety.org/kusama?wallet_address=' + kusama_address)
+}
+// polkadot wallety link
+function polkadot_wallety_link() {
+    window.open('https://wallety.org/polkadot?wallet_address=' + polkadot_address)
+}
+
+
+
 
 // join wallety pop up
 function joinWpopupOpen() {

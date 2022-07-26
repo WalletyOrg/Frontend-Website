@@ -303,10 +303,9 @@ async function polkadot() {
             img.src = 'images/key.svg';
             img.style.marginLeft = '3px'
             img.style.marginRight = '2.5px'
-            wallet_key.appendChild(img);}
-
-            // document.getElementById('key-tooltip').style.display = 'inline-block'
-            // document.getElementById('tool-tip-wallet-key').innerHTML = key + '\nClick to copy';}
+            wallet_key.appendChild(img);
+            document.getElementById('key-tooltip').style.display = 'inline-block'
+        }
 
 
 

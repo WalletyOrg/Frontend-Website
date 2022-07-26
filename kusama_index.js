@@ -293,7 +293,7 @@ async function kusama() {
             
 
 
-        
+
         // network keys
         document.getElementById('wallet-key').innerHTML = "";
         const wallet_key = document.getElementById("wallet-key");
@@ -308,10 +308,10 @@ async function kusama() {
             img.src = 'images/key.svg';
             img.style.marginLeft = '3px'
             img.style.marginRight = '2.5px'
-            wallet_key.appendChild(img);
+            wallet_key.appendChild(img);}
 
-            document.getElementById('key-tooltip').style.display = 'inline-block'
-            document.getElementById('tool-tip-wallet-key').innerHTML = key + '\nClick to copy';}
+            // document.getElementById('key-tooltip').style.display = 'inline-block'
+            // document.getElementById('tool-tip-wallet-key').innerHTML = key + '\nClick to copy';}
 
         
 

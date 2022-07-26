@@ -286,17 +286,30 @@ async function polkadot() {
             img.src = 'images/element.svg';
             document.getElementById('element-tooltip').style.display = 'inline-block'
             wallet_element.appendChild(img);} else {element = '-'}
+
+
+
+        // network keys
         document.getElementById('wallet-key').innerHTML = "";
         const wallet_key = document.getElementById("wallet-key");
+
         key = data.polkadot_wallet_address
+        kusama_address = data.polkadot_wallet_profile.wallet_profile.wallet_profile.kusama_address
+        polkadot_address = data.polkadot_wallet_profile.wallet_profile.wallet_profile.polkadot_address
+
+
         if (key != '') {
             var img = document.createElement("img");
             img.src = 'images/key.svg';
             img.style.marginLeft = '3px'
             img.style.marginRight = '2.5px'
-            wallet_key.appendChild(img);
-            document.getElementById('key-tooltip').style.display = 'inline-block'
-            document.getElementById('tool-tip-wallet-key').innerHTML = key + '\nClick to copy';}
+            wallet_key.appendChild(img);}
+
+            // document.getElementById('key-tooltip').style.display = 'inline-block'
+            // document.getElementById('tool-tip-wallet-key').innerHTML = key + '\nClick to copy';}
+
+
+
 
         display_name = data.polkadot_wallet_profile.wallet_profile.wallet_profile.display_name
         document.getElementById('display_name').innerHTML = display_name;

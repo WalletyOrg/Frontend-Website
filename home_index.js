@@ -3,7 +3,7 @@
 
 window.onload = async function checkServers() {
 // kusama server alive check
-await fetch('https://api.kusama.wallety.org/').then(() => {
+await fetch('https://kusama.web.api.wallety.org/').then(() => {
     // active or not
     document.getElementById('kusama-status').innerHTML = 'Active';
     document.getElementById('kusama-status').style.color = 'green';
@@ -19,7 +19,7 @@ await fetch('https://api.kusama.wallety.org/').then(() => {
     document.getElementById('kusama-blob').style.boxShadow = 'red';
 });
 // polkadot server alive check
-await fetch('https://api.polkadot.wallety.org/').then(() => {
+await fetch('https://polkadot.web.api.wallety.org/').then(() => {
     // active or not
     document.getElementById('polkadot-status').innerHTML = 'Active';
     document.getElementById('polkadot-status').style.color = 'green';
@@ -37,7 +37,7 @@ await fetch('https://api.polkadot.wallety.org/').then(() => {
 
 servers_alive = false
 // main server alive check
-await fetch('https://api.polkadot.wallety.org/').then(() => {
+await fetch('https://polkadot.web.api.wallety.org/').then(() => {
     servers_alive = true
     document.getElementById('serversDown').style.visibility = 'hidden'
     document.getElementById('loading-screen').style.visibility = 'hidden'
@@ -82,7 +82,7 @@ function submit_entry() {
                         loading_img.src = 'images/loading.gif';
                         var loading_span = document.getElementById("loading-gif");
                         loading_span.appendChild(loading_img);
-                        var api_url = 'https://api.kusama.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=kusama'
+                        var api_url = 'https://kusama.web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=kusama'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network.network == 'kusama') {
@@ -105,7 +105,7 @@ function submit_entry() {
                         loading_img.src = 'images/loading.gif';
                         var loading_span = document.getElementById("loading-gif");
                         loading_span.appendChild(loading_img);
-                        var api_url = 'https://api.polkadot.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=polkadot'
+                        var api_url = 'https://polkadot.web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=polkadot'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network.network == 'polkadot') {
@@ -128,7 +128,7 @@ function submit_entry() {
                         loading_img.src = 'images/loading.gif';
                         var loading_span = document.getElementById("loading-gif");
                         loading_span.appendChild(loading_img);
-                        var api_url = 'https://api.polkadot.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=all'
+                        var api_url = 'https://polkadot.web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=all'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network.network == 'polkadot') {
@@ -186,7 +186,7 @@ async function sendJoinForm() {
 
         if(form_name && form_role && form_email && form_project && form_website && form_net){
 
-            var form_url = 'https://api.kusama.wallety.org/joinwalletyform/?form_name=' + form_name + '&form_role=' + form_role + '&form_email=' + form_email + '&form_project=' + form_project + '&form_website=' + form_website + '&form_net=' + form_net + '&form_comments=' + form_comments
+            var form_url = 'https://kusama.web.api.wallety.org/joinwalletyform/?form_name=' + form_name + '&form_role=' + form_role + '&form_email=' + form_email + '&form_project=' + form_project + '&form_website=' + form_website + '&form_net=' + form_net + '&form_comments=' + form_comments
 
             fetch(form_url);
         
@@ -230,7 +230,7 @@ function sendSuggestForm() {
 
         if(suggestion){
 
-            var form_url = 'https://api.polkadot.wallety.org/suggestion/?suggestion=' + suggestion + '&network=' + suggestion_network + '&suggest_type=' + suggest_value + '&suggest_email=' + suggest_email
+            var form_url = 'https://polkadot.web.api.wallety.org/suggestion/?suggestion=' + suggestion + '&network=' + suggestion_network + '&suggest_type=' + suggest_value + '&suggest_email=' + suggest_email
 
 
             fetch(form_url);
@@ -273,7 +273,7 @@ function sendAPIForm() {
 
         if(API_name && API_email){
 
-            var form_url = 'https://api.polkadot.wallety.org/api_apply/?name=' + API_name + '&email=' + API_email + '&comments=' + API_comments
+            var form_url = 'https://polkadot.web.api.wallety.org/api_apply/?name=' + API_name + '&email=' + API_email + '&comments=' + API_comments
 
             fetch(form_url);
             document.getElementById('API_name').value = ''

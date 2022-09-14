@@ -33,21 +33,21 @@ window.onload = async function load(){
     // on load data
     var general_api_url = 'https://web.api.wallety.org/polkadot/general/'
     var general_responce = await fetch(general_api_url);
-    var general_data = await general_responce.json();
+    var chain_state = await general_responce.json();
 
-    current_dates = general_data.polkadot_general.current_dates.date
+    current_dates = chain_state.polkadot_general.current_dates.date
     document.getElementById('current_dates').innerHTML = current_dates;
-    polkadotPrice = general_data.polkadot_general.polkadot_price
+    polkadotPrice = chain_state.polkadot_general.polkadot_price
     exchangeRates(polkadotPrice, 'dollar', 'polkadot_price')
-    market_cap = general_data.polkadot_general.polkadot_market_cap
+    market_cap = chain_state.polkadot_general.polkadot_market_cap
     exchangeRates(market_cap, 'dollar', 'market_cap')
-    coin_gas_price = general_data.polkadot_general.recent_gas.coin_gas_fee
+    coin_gas_price = chain_state.polkadot_general.recent_gas.coin_gas_fee
     document.getElementById('coin_gas_price').innerHTML = coin_gas_price;
-    dollar_gas_price = general_data.polkadot_general.recent_gas.dollar_gas_fee
+    dollar_gas_price = chain_state.polkadot_general.recent_gas.dollar_gas_fee
     document.getElementById('dollar_gas_price').innerHTML = '$' + dollar_gas_price
-    polkadot_p_increase = general_data.polkadot_general.polkadot_p_increase
+    polkadot_p_increase = chain_state.polkadot_general.polkadot_p_increase
     document.getElementById('polkadot_p_increase').innerHTML = polkadot_p_increase;
-    transfer_count = general_data.polkadot_general.recent_gas.transfer_count
+    transfer_count = chain_state.polkadot_general.recent_gas.transfer_count
     document.getElementById('transfer_count').innerHTML = transfer_count
     if (polkadot_p_increase[0] == '-') {
         document.getElementById('polkadot_p_increase').style.color = 'red'

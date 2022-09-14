@@ -31,10 +31,10 @@ window.onload = async function load(){
     general_data_loaded = false
 
     // on load data
-    var general_api_url = 'https://web.api.wallety.org/general/'
+    var general_api_url = 'https://web.api.wallety.org/general?network=kusama'
     var general_responce = await fetch(general_api_url);
     var chain_state = await general_responce.json();
-    
+
 
     current_dates = chain_state.polkadot_general.current_dates.date
     document.getElementById('current_dates').innerHTML = current_dates;

@@ -34,8 +34,7 @@ window.onload = async function load(){
     var general_api_url = 'https://web.api.wallety.org/general/'
     var general_responce = await fetch(general_api_url);
     var chain_state = await general_responce.json();
-
-    console.log(chain_state)
+    
 
     current_dates = chain_state.polkadot_general.current_dates.date
     document.getElementById('current_dates').innerHTML = current_dates;

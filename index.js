@@ -1,7 +1,7 @@
 
 servers_alive = false
 // main server alive check
-fetch('https://kusama.web.api.wallety.org/').then(() => {
+fetch('https://web.api.wallety.org/').then(() => {
     servers_alive = true
   }).catch(() => {
     servers_alive = false
@@ -24,7 +24,7 @@ function submit_entry() {
                         loading_img.src = 'images/loading.gif';
                         var loading_span = document.getElementById("loading-gif");
                         loading_span.appendChild(loading_img);
-                        var api_url = 'https://kusama.web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=kusama'
+                        var api_url = 'https://web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=kusama'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network.network == 'kusama') {
@@ -47,7 +47,7 @@ function submit_entry() {
                         loading_img.src = 'images/loading.gif';
                         var loading_span = document.getElementById("loading-gif");
                         loading_span.appendChild(loading_img);
-                        var api_url = 'https://polkadot.web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=polkadot'
+                        var api_url = 'https://web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=polkadot'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network.network == 'polkadot') {
@@ -70,7 +70,7 @@ function submit_entry() {
                         loading_img.src = 'images/loading.gif';
                         var loading_span = document.getElementById("loading-gif");
                         loading_span.appendChild(loading_img);
-                        var api_url = 'https://polkadot.web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=all'
+                        var api_url = 'https://web.api.wallety.org/walletcheck/?wallet_address=' + wallet_address + '&specified_network=all'
                         checkNetworkReq = await fetch(api_url)
                         checkNetworkReqResponce = await checkNetworkReq.json()
                         if (checkNetworkReqResponce.wallet_network.network == 'polkadot') {

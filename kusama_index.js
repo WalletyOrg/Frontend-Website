@@ -187,6 +187,7 @@ async function kusama() {
     data = await responce.json();
 
     function displayData() {
+        console.log(data)
         // general data
         current_dates = data.general_kusama.kusama_general.currentDates.date
         document.getElementById('currentDates').innerHTML = current_dates;

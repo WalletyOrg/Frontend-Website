@@ -371,154 +371,154 @@ async function kusama() {
 
         // monthly
         // monthly data title date
-        monthly_data_title_date = data.kusama_monthly_transfers.monthly_total.monthly_dates_title
+        monthly_data_title_date = data.monthly_transfers.monthly_total.monthly_dates_title
         document.getElementById('monthly-data-title-date').innerHTML = monthly_data_title_date;
 
         // monthly deposit
-        monthly_deposit_interactions = data.kusama_monthly_transfers.monthly_deposit.monthly_deposit_interactions
+        monthly_deposit_interactions = data.monthly_transfers.monthly_deposit.monthly_deposit_interactions
         document.getElementById('monthly_deposit_interactions').innerHTML = monthly_deposit_interactions;
-        monthly_deposit_volume_coins = data.kusama_monthly_transfers.monthly_deposit.monthly_deposit_volume_coins
+        monthly_deposit_volume_coins = data.monthly_transfers.monthly_deposit.monthly_deposit_volume_coins
         document.getElementById('monthly_deposit_volume_coins').innerHTML = monthly_deposit_volume_coins;
-        monthly_deposit_volume_dollars = data.kusama_monthly_transfers.monthly_deposit.monthly_deposit_volume_dollars
+        monthly_deposit_volume_dollars = data.monthly_transfers.monthly_deposit.monthly_deposit_volume_dollars
         exchangeRates(monthly_deposit_volume_dollars, 'dollar', 'monthly_deposit_volume_dollars')
-        monthly_deposits_first_txn_date_date = data.kusama_monthly_transfers.monthly_deposit.monthly_deposits_first_txn_date.first_txn_full_date
+        monthly_deposits_first_txn_date_date = data.monthly_transfers.monthly_deposit.monthly_deposits_first_txn_date.first_txn_full_date
         document.getElementById('monthly_deposits_first_txn_date_date').innerHTML = monthly_deposits_first_txn_date_date;
-        monthly_deposits_first_txn_date_days = data.kusama_monthly_transfers.monthly_deposit.monthly_deposits_first_txn_date.days_since
+        monthly_deposits_first_txn_date_days = data.monthly_transfers.monthly_deposit.monthly_deposits_first_txn_date.days_since
         document.getElementById('monthly_deposits_first_txn_date_days').innerHTML = monthly_deposits_first_txn_date_days;
-        monthly_deposits_last_txn_date_date = data.kusama_monthly_transfers.monthly_deposit.monthly_deposits_last_txn_date.last_txn_full_date
+        monthly_deposits_last_txn_date_date = data.monthly_transfers.monthly_deposit.monthly_deposits_last_txn_date.last_txn_full_date
         document.getElementById('monthly_deposits_last_txn_date_date').innerHTML = monthly_deposits_last_txn_date_date;
-        monthly_deposits_last_txn_date_days = data.kusama_monthly_transfers.monthly_deposit.monthly_deposits_last_txn_date.days_since
+        monthly_deposits_last_txn_date_days = data.monthly_transfers.monthly_deposit.monthly_deposits_last_txn_date.days_since
         document.getElementById('monthly_deposits_last_txn_date_days').innerHTML = monthly_deposits_last_txn_date_days;
 
         // monthly total
-        monthly_total_failed_gas_coin = data.kusama_monthly_transfers.monthly_total.monthly_total_failed_gas_coin
+        monthly_total_failed_gas_coin = data.monthly_transfers.monthly_total.monthly_total_failed_gas_coin
         document.getElementById('monthly_total_failed_gas_coin').innerHTML = monthly_total_failed_gas_coin;
-        monthly_total_failed_gas_dollars = data.kusama_monthly_transfers.monthly_total.monthly_total_failed_gas_dollars
+        monthly_total_failed_gas_dollars = data.monthly_transfers.monthly_total.monthly_total_failed_gas_dollars
         exchangeRates(monthly_total_failed_gas_dollars, 'dollar', 'monthly_total_failed_gas_dollars')
-        monthly_total_failed_interactions = data.kusama_monthly_transfers.monthly_total.monthly_total_failed_interactions
+        monthly_total_failed_interactions = data.monthly_transfers.monthly_total.monthly_total_failed_interactions
         document.getElementById('monthly_total_failed_interactions').innerHTML = monthly_total_failed_interactions;
-        monthly_total_gas_coin = data.kusama_monthly_transfers.monthly_total.monthly_total_gas_coin
+        monthly_total_gas_coin = data.monthly_transfers.monthly_total.monthly_total_gas_coin
         document.getElementById('monthly_total_gas_coin').innerHTML = monthly_total_gas_coin;
-        monthly_total_gas_dollars = data.kusama_monthly_transfers.monthly_total.monthly_total_gas_dollars
+        monthly_total_gas_dollars = data.monthly_transfers.monthly_total.monthly_total_gas_dollars
         exchangeRates(monthly_total_gas_dollars, 'dollar', 'monthly_total_gas_dollars')
-        monthly_total_interactions = data.kusama_monthly_transfers.monthly_total.monthly_total_interactions
+        monthly_total_interactions = data.monthly_transfers.monthly_total.monthly_total_interactions
         document.getElementById('monthly_total_interactions').innerHTML = monthly_total_interactions;
-        monthly_total_volume_coins = data.kusama_monthly_transfers.monthly_total.monthly_total_volume_coins
+        monthly_total_volume_coins = data.monthly_transfers.monthly_total.monthly_total_volume_coins
         document.getElementById('monthly_total_volume_coins').innerHTML = monthly_total_volume_coins;
-        monthly_total_volume_dollars = data.kusama_monthly_transfers.monthly_total.monthly_total_volume_dollars
+        monthly_total_volume_dollars = data.monthly_transfers.monthly_total.monthly_total_volume_dollars
         exchangeRates(monthly_total_volume_dollars, 'dollar', 'monthly_total_volume_dollars')
         monthly_total_successful_interactions = monthly_total_interactions - monthly_total_failed_interactions;
         document.getElementById('monthly-total-successful-interactions').innerHTML = monthly_total_successful_interactions;
-        monthly_total_last_txn_date_date = data.kusama_monthly_transfers.monthly_total.monthly_total_last_txn_date.last_txn_full_date
+        monthly_total_last_txn_date_date = data.monthly_transfers.monthly_total.monthly_total_last_txn_date.last_txn_full_date
         document.getElementById('monthly_total_last_txn_date_date').innerHTML = monthly_total_last_txn_date_date;
-        monthly_total_last_txn_date_days = data.kusama_monthly_transfers.monthly_total.monthly_total_last_txn_date.days_since
+        monthly_total_last_txn_date_days = data.monthly_transfers.monthly_total.monthly_total_last_txn_date.days_since
         document.getElementById('monthly_total_last_txn_date_days').innerHTML = monthly_total_last_txn_date_days;
-        monthly_total_first_txn_date_date = data.kusama_monthly_transfers.monthly_total.monthly_total_first_txn_date.first_txn_full_date
+        monthly_total_first_txn_date_date = data.monthly_transfers.monthly_total.monthly_total_first_txn_date.first_txn_full_date
         document.getElementById('monthly_total_first_txn_date_date').innerHTML = monthly_total_first_txn_date_date;
-        monthly_total_first_txn_date_days = data.kusama_monthly_transfers.monthly_total.monthly_total_first_txn_date.days_since
+        monthly_total_first_txn_date_days = data.monthly_transfers.monthly_total.monthly_total_first_txn_date.days_since
         document.getElementById('monthly_total_first_txn_date_days').innerHTML = monthly_total_first_txn_date_days;
 
         // monthly withdrawal
-        monthly_withdrawal_failed_gas_coin = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_failed_gas_coin
+        monthly_withdrawal_failed_gas_coin = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_failed_gas_coin
         document.getElementById('monthly_withdrawal_failed_gas_coin').innerHTML = monthly_withdrawal_failed_gas_coin;
-        monthly_withdrawal_failed_gas_dollars = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_failed_gas_dollars
+        monthly_withdrawal_failed_gas_dollars = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_failed_gas_dollars
         exchangeRates(monthly_withdrawal_failed_gas_dollars, 'dollar', 'monthly_withdrawal_failed_gas_dollars')
-        monthly_withdrawal_failed_interactions = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_failed_interactions
+        monthly_withdrawal_failed_interactions = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_failed_interactions
         document.getElementById('monthly_withdrawal_failed_interactions').innerHTML = monthly_withdrawal_failed_interactions;
-        monthly_withdrawal_first_txn_date_date = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_first_txn_date.first_txn_full_date
+        monthly_withdrawal_first_txn_date_date = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_first_txn_date.first_txn_full_date
         document.getElementById('monthly_withdrawal_first_txn_date_date').innerHTML = monthly_withdrawal_first_txn_date_date;
-        monthly_withdrawal_first_txn_date_days = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_first_txn_date.days_since
+        monthly_withdrawal_first_txn_date_days = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_first_txn_date.days_since
         document.getElementById('monthly_withdrawal_first_txn_date_days').innerHTML = monthly_withdrawal_first_txn_date_days;
-        monthly_withdrawal_gas_coin = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_gas_coin
+        monthly_withdrawal_gas_coin = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_gas_coin
         document.getElementById('monthly_withdrawal_gas_coin').innerHTML = monthly_withdrawal_gas_coin;
-        monthly_withdrawal_gas_dollars = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_gas_dollars
+        monthly_withdrawal_gas_dollars = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_gas_dollars
         exchangeRates(monthly_withdrawal_gas_dollars, 'dollar', 'monthly_withdrawal_gas_dollars')
-        monthly_withdrawal_interactions = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_interactions
+        monthly_withdrawal_interactions = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_interactions
         document.getElementById('monthly_withdrawal_interactions').innerHTML = monthly_withdrawal_interactions;
-        monthly_withdrawal_last_txn_date_date = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_last_txn_date.last_txn_full_date
+        monthly_withdrawal_last_txn_date_date = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_last_txn_date.last_txn_full_date
         document.getElementById('monthly_withdrawal_last_txn_date_date').innerHTML = monthly_withdrawal_last_txn_date_date;
-        monthly_withdrawal_last_txn_date_days = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_last_txn_date.days_since
+        monthly_withdrawal_last_txn_date_days = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_last_txn_date.days_since
         document.getElementById('monthly_withdrawal_last_txn_date_days').innerHTML = monthly_withdrawal_last_txn_date_days;
-        monthly_withdrawal_volume_coin = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_volume_coin
+        monthly_withdrawal_volume_coin = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_volume_coin
         document.getElementById('monthly_withdrawal_volume_coin').innerHTML = monthly_withdrawal_volume_coin;
-        monthly_withdrawal_volume_dollars = data.kusama_monthly_transfers.monthly_withdrawal.monthly_withdrawal_volume_dollars
+        monthly_withdrawal_volume_dollars = data.monthly_transfers.monthly_withdrawal.monthly_withdrawal_volume_dollars
         exchangeRates(monthly_withdrawal_volume_dollars, 'dollar', 'monthly_withdrawal_volume_dollars')
         monthly_withdrawal_successful_interactions = monthly_withdrawal_interactions - monthly_withdrawal_failed_interactions;
         document.getElementById('monthly-withdrawal-successful-interactions').innerHTML = monthly_withdrawal_successful_interactions;
 
         // total
         // total data title date
-        total_data_title_date = data.kusama_transfers_data.total_transfers.total.total_dates_title
+        total_data_title_date = data.transfers.total_transfers.total.total_dates_title
         document.getElementById('total-data-title-date').innerHTML = total_data_title_date;
 
         // total deposit
-        total_deposit_interactions = data.kusama_transfers_data.total_transfers.total_deposits.total_deposit_interactions
+        total_deposit_interactions = data.transfers.total_transfers.total_deposits.total_deposit_interactions
         document.getElementById('total_deposit_interactions').innerHTML = total_deposit_interactions;
-        total_deposit_volume_coins = data.kusama_transfers_data.total_transfers.total_deposits.total_deposit_volume_coins
+        total_deposit_volume_coins = data.transfers.total_transfers.total_deposits.total_deposit_volume_coins
         document.getElementById('total_deposit_volume_coins').innerHTML = total_deposit_volume_coins;
-        total_deposit_volume_dollars = data.kusama_transfers_data.total_transfers.total_deposits.total_deposit_volume_dollars
+        total_deposit_volume_dollars = data.transfers.total_transfers.total_deposits.total_deposit_volume_dollars
         exchangeRates(total_deposit_volume_dollars, 'dollar', 'total_deposit_volume_dollars')
-        total_deposits_first_txn_date_date = data.kusama_transfers_data.total_transfers.total_deposits.deposits_first_txn_date.first_txn_full_date
+        total_deposits_first_txn_date_date = data.transfers.total_transfers.total_deposits.deposits_first_txn_date.first_txn_full_date
         document.getElementById('total_deposits_first_txn_date_date').innerHTML = total_deposits_first_txn_date_date;
-        total_deposits_first_txn_date_days = data.kusama_transfers_data.total_transfers.total_deposits.deposits_first_txn_date.days_since
+        total_deposits_first_txn_date_days = data.transfers.total_transfers.total_deposits.deposits_first_txn_date.days_since
         document.getElementById('total_deposits_first_txn_date_days').innerHTML = total_deposits_first_txn_date_days;
-        total_deposits_last_txn_date_date = data.kusama_transfers_data.total_transfers.total_deposits.deposits_last_txn_date.last_txn_full_date
+        total_deposits_last_txn_date_date = data.transfers.total_transfers.total_deposits.deposits_last_txn_date.last_txn_full_date
         document.getElementById('total_deposits_last_txn_date_date').innerHTML = total_deposits_last_txn_date_date;
-        total_deposits_last_txn_date_days = data.kusama_transfers_data.total_transfers.total_deposits.deposits_last_txn_date.days_since
+        total_deposits_last_txn_date_days = data.transfers.total_transfers.total_deposits.deposits_last_txn_date.days_since
         document.getElementById('total_deposits_last_txn_date_days').innerHTML = total_deposits_last_txn_date_days;
 
         // total total
-        total_total_failed_gas_coin = data.kusama_transfers_data.total_transfers.total.total_gas_coins_failed
+        total_total_failed_gas_coin = data.transfers.total_transfers.total.total_gas_coins_failed
         document.getElementById('total_total_failed_gas_coin').innerHTML = total_total_failed_gas_coin;
-        total_total_failed_gas_dollars = data.kusama_transfers_data.total_transfers.total.total_gas_dollars_failed
+        total_total_failed_gas_dollars = data.transfers.total_transfers.total.total_gas_dollars_failed
         exchangeRates(total_total_failed_gas_dollars, 'dollar', 'total_total_failed_gas_dollars')
-        total_total_failed_interactions = data.kusama_transfers_data.total_transfers.total.total_interactions_failed
+        total_total_failed_interactions = data.transfers.total_transfers.total.total_interactions_failed
         document.getElementById('total_total_failed_interactions').innerHTML = total_total_failed_interactions;
-        total_total_gas_coin = data.kusama_transfers_data.total_transfers.total.total_gas_coins
+        total_total_gas_coin = data.transfers.total_transfers.total.total_gas_coins
         document.getElementById('total_total_gas_coin').innerHTML = total_total_gas_coin;
-        total_total_gas_dollars = data.kusama_transfers_data.total_transfers.total.total_gas_dollars
+        total_total_gas_dollars = data.transfers.total_transfers.total.total_gas_dollars
         exchangeRates(total_total_gas_dollars, 'dollar', 'total_total_gas_dollars')
-        total_total_interactions = data.kusama_transfers_data.total_transfers.total.total_interactions
+        total_total_interactions = data.transfers.total_transfers.total.total_interactions
         document.getElementById('total_total_interactions').innerHTML = total_total_interactions;
-        total_total_volume_coins = data.kusama_transfers_data.total_transfers.total.total_volume_coins
+        total_total_volume_coins = data.transfers.total_transfers.total.total_volume_coins
         document.getElementById('total_total_volume_coins').innerHTML = total_total_volume_coins;
-        total_total_volume_dollars = data.kusama_transfers_data.total_transfers.total.total_volume_dollars
+        total_total_volume_dollars = data.transfers.total_transfers.total.total_volume_dollars
         exchangeRates(total_total_volume_dollars, 'dollar', 'total_total_volume_dollars')
         total_total_successful_interactions = total_total_interactions - total_total_failed_interactions;
         document.getElementById('total-total-successful-interactions').innerHTML = total_total_successful_interactions;
-        total_last_txn_date_date = data.kusama_transfers_data.total_transfers.total.total_last_txn_date.last_txn_full_date
+        total_last_txn_date_date = data.transfers.total_transfers.total.total_last_txn_date.last_txn_full_date
         document.getElementById('total_total_last_txn_date_date').innerHTML = total_last_txn_date_date;
-        total_last_txn_date_days = data.kusama_transfers_data.total_transfers.total.total_last_txn_date.days_since
+        total_last_txn_date_days = data.transfers.total_transfers.total.total_last_txn_date.days_since
         document.getElementById('total_total_last_txn_date_days').innerHTML = total_last_txn_date_days;
-        total_first_txn_date_date = data.kusama_transfers_data.total_transfers.total.total_first_txn_date.first_txn_full_date
+        total_first_txn_date_date = data.transfers.total_transfers.total.total_first_txn_date.first_txn_full_date
         document.getElementById('total_total_first_txn_date_date').innerHTML = total_first_txn_date_date;
-        total_first_txn_date_days = data.kusama_transfers_data.total_transfers.total.total_first_txn_date.days_since
+        total_first_txn_date_days = data.transfers.total_transfers.total.total_first_txn_date.days_since
         document.getElementById('total_total_first_txn_date_days').innerHTML = total_first_txn_date_days;
 
         // total withdrawal
-        total_withdrawal_failed_gas_coin = data.kusama_transfers_data.total_transfers.total_withdrawals.total_withdrawal_gas_coins_failed
+        total_withdrawal_failed_gas_coin = data.transfers.total_transfers.total_withdrawals.total_withdrawal_gas_coins_failed
         document.getElementById('total_withdrawal_failed_gas_coin').innerHTML = total_withdrawal_failed_gas_coin;
-        total_withdrawal_failed_gas_dollars = data.kusama_transfers_data.total_transfers.total_withdrawals.total_withdrawal_gas_dollars_failed;
+        total_withdrawal_failed_gas_dollars = data.transfers.total_transfers.total_withdrawals.total_withdrawal_gas_dollars_failed;
         exchangeRates(total_withdrawal_failed_gas_dollars, 'dollar', 'total_withdrawal_failed_gas_dollars')
-        total_withdrawal_failed_interactions = data.kusama_transfers_data.total_transfers.total_withdrawals.total_withdrawal_interactions_failed;
+        total_withdrawal_failed_interactions = data.transfers.total_transfers.total_withdrawals.total_withdrawal_interactions_failed;
         document.getElementById('total_withdrawal_failed_interactions').innerHTML = total_withdrawal_failed_interactions;
-        total_withdrawal_first_txn_date_date = data.kusama_transfers_data.total_transfers.total_withdrawals.withdrawal_first_txn_date.first_txn_full_date;
+        total_withdrawal_first_txn_date_date = data.transfers.total_transfers.total_withdrawals.withdrawal_first_txn_date.first_txn_full_date;
         document.getElementById('total_withdrawal_first_txn_date_date').innerHTML = total_withdrawal_first_txn_date_date;
-        total_withdrawal_first_txn_date_days = data.kusama_transfers_data.total_transfers.total_withdrawals.withdrawal_first_txn_date.days_since;
+        total_withdrawal_first_txn_date_days = data.transfers.total_transfers.total_withdrawals.withdrawal_first_txn_date.days_since;
         document.getElementById('total_withdrawal_first_txn_date_days').innerHTML = total_withdrawal_first_txn_date_days;
-        total_withdrawal_gas_coin = data.kusama_transfers_data.total_transfers.total_withdrawals.total_withdrawal_gas_coins;
+        total_withdrawal_gas_coin = data.transfers.total_transfers.total_withdrawals.total_withdrawal_gas_coins;
         document.getElementById('total_withdrawal_gas_coin').innerHTML = total_withdrawal_gas_coin;
-        total_withdrawal_gas_dollars = data.kusama_transfers_data.total_transfers.total_withdrawals.total_withdrawal_gas_dollars;
+        total_withdrawal_gas_dollars = data.transfers.total_transfers.total_withdrawals.total_withdrawal_gas_dollars;
         exchangeRates(total_withdrawal_gas_dollars, 'dollar', 'total_withdrawal_gas_dollars')
-        total_withdrawal_interactions = data.kusama_transfers_data.total_transfers.total_withdrawals.total_withdrawal_interactions;
+        total_withdrawal_interactions = data.transfers.total_transfers.total_withdrawals.total_withdrawal_interactions;
         document.getElementById('total_withdrawal_interactions').innerHTML = total_withdrawal_interactions;
-        total_withdrawal_last_txn_date_date = data.kusama_transfers_data.total_transfers.total_withdrawals.withdrawal_last_txn_date.last_txn_full_date;
+        total_withdrawal_last_txn_date_date = data.transfers.total_transfers.total_withdrawals.withdrawal_last_txn_date.last_txn_full_date;
         document.getElementById('total_withdrawal_last_txn_date_date').innerHTML = total_withdrawal_last_txn_date_date;
-        total_withdrawal_last_txn_date_days = data.kusama_transfers_data.total_transfers.total_withdrawals.withdrawal_last_txn_date.days_since;
+        total_withdrawal_last_txn_date_days = data.transfers.total_transfers.total_withdrawals.withdrawal_last_txn_date.days_since;
         document.getElementById('total_withdrawal_last_txn_date_days').innerHTML = total_withdrawal_last_txn_date_days;
-        total_withdrawal_volume_coin = data.kusama_transfers_data.total_transfers.total_withdrawals.withdrawal_volume_coins;
+        total_withdrawal_volume_coin = data.transfers.total_transfers.total_withdrawals.withdrawal_volume_coins;
         document.getElementById('total_withdrawal_volume_coin').innerHTML = total_withdrawal_volume_coin;
-        total_withdrawal_volume_dollars = data.kusama_transfers_data.total_transfers.total_withdrawals.total_withdrawal_volume_dollars;
+        total_withdrawal_volume_dollars = data.transfers.total_transfers.total_withdrawals.total_withdrawal_volume_dollars;
         exchangeRates(total_withdrawal_volume_dollars, 'dollar', 'total_withdrawal_volume_dollars')
         total_withdrawal_successful_interactions = total_withdrawal_interactions - total_withdrawal_failed_interactions;
         document.getElementById('total-withdrawal-successful-interactions').innerHTML = total_withdrawal_successful_interactions;
@@ -548,8 +548,8 @@ async function kusama() {
             })}
 
             // raw txns 
-            withdraw_transfers = data.kusama_raw_transfers.raw_transfers.withdraw_transfers
-            deposit_transfers = data.kusama_raw_transfers.raw_transfers.deposit_transfers
+            withdraw_transfers = data.raw_transfers.raw_transfers.withdraw_transfers
+            deposit_transfers = data.raw_transfers.raw_transfers.deposit_transfers
             document.getElementById('raw-withdrawals').innerHTML = ''
             document.getElementById('raw-deposits').innerHTML = ''
             txnLoopSetCurrency(withdraw_transfers, 'raw-withdrawals')
@@ -557,7 +557,7 @@ async function kusama() {
 
             // unique wallets
             // total unique 
-            const total_data_key = data.kusama_top_deposit_withdraws.all_top_accounts
+            const total_data_key = data.unique_wallets.all_top_accounts
             total_unique = total_data_key.all_total
             withdrawals_unique = total_data_key.all_withdrawals
             deposits_unique = total_data_key.all_deposits
@@ -569,7 +569,7 @@ async function kusama() {
             txnLoopSetCurrency(deposits_unique, 'total-unique-wallets-deposits')
 
             // monthly unique 
-            const monthly_data_key =  data.kusama_top_deposit_withdraws.monthly_top_accounts
+            const monthly_data_key =  data.unique_wallets.monthly_top_accounts
             monthly_total_unique = monthly_data_key.monthly_total
             monthly_withdrawals_unique = monthly_data_key.monthly_withdrawals
             monthly_deposits_unique = monthly_data_key.monthly_deposits
@@ -1135,15 +1135,15 @@ async function changeCurrencyData(newCurrency) {
             } else {document.getElementById(ID).innerHTML = value}
         })}
         // raw txns 
-        const withdraw_transfers = data.kusama_raw_transfers.raw_transfers.withdraw_transfers
-        const deposit_transfers = data.kusama_raw_transfers.raw_transfers.deposit_transfers
+        const withdraw_transfers = data.raw_transfers.raw_transfers.withdraw_transfers
+        const deposit_transfers = data.raw_transfers.raw_transfers.deposit_transfers
         document.getElementById('raw-withdrawals').innerHTML = ''
         document.getElementById('raw-deposits').innerHTML = ''
         txnLoopChangeCurrency(withdraw_transfers, 'raw-withdrawals')
         txnLoopChangeCurrency(deposit_transfers, 'raw-deposits')
         // unique wallets
         // total unique 
-        const total_data_key = data.kusama_top_deposit_withdraws.all_top_accounts
+        const total_data_key = data.unique_wallets.all_top_accounts
         const total_unique = total_data_key.all_total
         const withdrawals_unique = total_data_key.all_withdrawals
         const deposits_unique = total_data_key.all_deposits
@@ -1185,7 +1185,7 @@ async function changeCurrencyData(newCurrency) {
         exchangeRates(monthly_withdrawal_gas_dollars, newCurrency, 'monthly_withdrawal_gas_dollars')
         exchangeRates(monthly_withdrawal_volume_dollars, newCurrency, 'monthly_withdrawal_volume_dollars')
         // monthly unique 
-        const monthly_data_key =  data.kusama_top_deposit_withdraws.monthly_top_accounts
+        const monthly_data_key =  data.unique_wallets.monthly_top_accounts
         const monthly_total_unique = monthly_data_key.monthly_total
         const monthly_withdrawals_unique = monthly_data_key.monthly_withdrawals
         const monthly_deposits_unique = monthly_data_key.monthly_deposits

@@ -187,8 +187,8 @@ async function polkadot() {
 
     function displayData() {
         // general data
-        current_dates = data.general_polkadot.polkadot_general.current_dates.date
-        document.getElementById('current_dates').innerHTML = current_dates;
+        current_dates = data.general_polkadot.polkadot_general.currentDates.date
+        document.getElementById('currentDates').innerHTML = current_dates;
         polkadotPrice = data.general_polkadot.polkadot_general.polkadot_price
         exchangeRates(polkadotPrice, 'dollar', 'polkadot_price')
         market_cap = data.general_polkadot.polkadot_general.polkadot_market_cap

@@ -188,8 +188,8 @@ async function kusama() {
 
     function displayData() {
         // general data
-        current_dates = data.general_kusama.kusama_general.current_dates.date
-        document.getElementById('current_dates').innerHTML = current_dates;
+        current_dates = data.general_kusama.kusama_general.currentDates.date
+        document.getElementById('currentDates').innerHTML = current_dates;
         kusamaPrice = data.general_kusama.kusama_general.kusama_price
         exchangeRates(kusamaPrice, 'dollar', 'kusama_price')
         market_cap = data.general_kusama.kusama_general.kusama_market_cap

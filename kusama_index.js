@@ -302,7 +302,7 @@ async function kusama() {
         document.getElementById('wallet-key').innerHTML = "";
         const wallet_key = document.getElementById("wallet-key");
 
-        key = data.kusama_wallet_address
+        key = data.wallet_address
         kusama_address = data.wallet_profile.wallet_profile.wallet_profile.kusama_address
         polkadot_address = data.wallet_profile.wallet_profile.wallet_profile.polkadot_address
 
@@ -610,10 +610,10 @@ function copy_key_reset_polkadot() {
 // wallet key kusama
 function copy_key_kusama() {
     navigator.clipboard.writeText(kusama_address);
-    document.getElementById('kusama_wallet_address').innerHTML = 'Copied!';
+    document.getElementById('wallet_address').innerHTML = 'Copied!';
     }
 function copy_key_reset_kusama() {
-    document.getElementById('kusama_wallet_address').innerHTML = kusama_address + ' Click to copy';
+    document.getElementById('wallet_address').innerHTML = kusama_address + ' Click to copy';
 }
 
 

@@ -293,7 +293,7 @@ async function polkadot() {
         document.getElementById('wallet-key').innerHTML = "";
         const wallet_key = document.getElementById("wallet-key");
 
-        key = data.polkadot_wallet_address
+        key = data.wallet_address
         kusama_address = data.wallet_profile.wallet_profile.wallet_profile.kusama_address
         polkadot_address = data.wallet_profile.wallet_profile.wallet_profile.polkadot_address
 
@@ -592,10 +592,10 @@ if (wallet_address_TF != null ){
 // wallet key polkadot
 function copy_key_polkadot() {
     navigator.clipboard.writeText(polkadot_address);
-    document.getElementById('polkadot_wallet_address').innerHTML = 'Copied!';
+    document.getElementById('wallet_address').innerHTML = 'Copied!';
     }
 function copy_key_reset_polkadot() {
-    document.getElementById('polkadot_wallet_address').innerHTML = polkadot_address + ' Click to copy';
+    document.getElementById('wallet_address').innerHTML = polkadot_address + ' Click to copy';
 }
 // wallet key kusama
 function copy_key_kusama() {

@@ -187,19 +187,19 @@ async function polkadot() {
 
     function displayData() {
         // general data
-        current_dates = data.general_polkadot.polkadot_general.currentDates.date
+        current_dates = data.chain_state.polkadot_general.currentDates.date
         document.getElementById('currentDates').innerHTML = current_dates;
-        polkadotPrice = data.general_polkadot.polkadot_general.polkadot_price
+        polkadotPrice = data.chain_state.polkadot_general.polkadot_price
         exchangeRates(polkadotPrice, 'dollar', 'polkadot_price')
-        market_cap = data.general_polkadot.polkadot_general.polkadot_market_cap
+        market_cap = data.chain_state.polkadot_general.polkadot_market_cap
         exchangeRates(market_cap, 'dollar', 'market_cap')
-        coin_gas_price = data.general_polkadot.polkadot_general.recent_gas.coin_gas_fee
+        coin_gas_price = data.chain_state.polkadot_general.recent_gas.coin_gas_fee
         document.getElementById('coin_gas_price').innerHTML = coin_gas_price;
-        dollar_gas_price = data.general_polkadot.polkadot_general.recent_gas.dollar_gas_fee
+        dollar_gas_price = data.chain_state.polkadot_general.recent_gas.dollar_gas_fee
         document.getElementById('dollar_gas_price').innerHTML = '$' + dollar_gas_price
-        polkadot_p_increase = data.general_polkadot.polkadot_general.polkadot_p_increase
+        polkadot_p_increase = data.chain_state.polkadot_general.polkadot_p_increase
         document.getElementById('polkadot_p_increase').innerHTML = polkadot_p_increase;
-        transfer_count = data.general_polkadot.polkadot_general.recent_gas.transfer_count
+        transfer_count = data.chain_state.polkadot_general.recent_gas.transfer_count
         document.getElementById('transfer_count').innerHTML = transfer_count
         if (polkadot_p_increase[0] == '-') {
             document.getElementById('polkadot_p_increase').style.color = 'red'

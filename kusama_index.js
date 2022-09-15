@@ -188,25 +188,27 @@ async function kusama() {
     const api_url = 'https://web.api.wallety.org/kusama/?wallet_address=' + wallet_address
     const responce = await fetch(api_url);
     data = await responce.json();
+
+    console.log(1235)
     
     console.log(data)
 
     function displayData() {
         
         // general data
-        current_dates = data.general_kusama.kusama_general.currentDates.date
+        current_dates = data.chain_state.kusama_general.currentDates.date
         document.getElementById('currentDates').innerHTML = current_dates;
-        kusamaPrice = data.general_kusama.kusama_general.kusama_price
+        kusamaPrice = data.chain_state.kusama_general.kusama_price
         exchangeRates(kusamaPrice, 'dollar', 'kusama_price')
-        market_cap = data.general_kusama.kusama_general.kusama_market_cap
+        market_cap = data.chain_state.kusama_general.kusama_market_cap
         exchangeRates(market_cap, 'dollar', 'market_cap')
-        coin_gas_price = data.general_kusama.kusama_general.recent_gas.coin_gas_fee
+        coin_gas_price = data.chain_state.kusama_general.recent_gas.coin_gas_fee
         document.getElementById('coin_gas_price').innerHTML = coin_gas_price;
-        dollar_gas_price = data.general_kusama.kusama_general.recent_gas.dollar_gas_fee
+        dollar_gas_price = data.chain_state.kusama_general.recent_gas.dollar_gas_fee
         document.getElementById('dollar_gas_price').innerHTML = '$' + dollar_gas_price
-        kusama_p_increase = data.general_kusama.kusama_general.kusama_p_increase
+        kusama_p_increase = data.chain_state.kusama_general.kusama_p_increase
         document.getElementById('kusama_p_increase').innerHTML = kusama_p_increase;
-        transfer_count = data.general_kusama.kusama_general.recent_gas.transfer_count
+        transfer_count = data.chain_state.kusama_general.recent_gas.transfer_count
         document.getElementById('transfer_count').innerHTML = transfer_count
         if (kusama_p_increase[0] == '-') {
             document.getElementById('kusama_p_increase').style.color = 'red'

@@ -217,9 +217,9 @@ async function polkadot() {
         // profile
         // display name img judgement_img
         var judgementImg = ''
-        const profileJudgement = data.polkadot_wallet_profile.wallet_profile.wallet_profile.judgements
-        const identity = data.polkadot_wallet_profile.wallet_profile.wallet_profile.identity
-        const sub = data.polkadot_wallet_profile.wallet_profile.wallet_profile.sub
+        const profileJudgement = data.wallet_profile.wallet_profile.wallet_profile.judgements
+        const identity = data.wallet_profile.wallet_profile.wallet_profile.identity
+        const sub = data.wallet_profile.wallet_profile.wallet_profile.sub
         if (identity == true) {
             if (profileJudgement == false) {
                 judgementImg = 'images/false-judgement.svg';}
@@ -241,7 +241,7 @@ async function polkadot() {
         document.getElementById('socials-dash').style.display = 'none'
         document.getElementById('wallet-twitter').innerHTML = "";
         const wallet_twitter = document.getElementById("wallet-twitter");
-        twitter = data.polkadot_wallet_profile.wallet_profile.wallet_profile.twitter
+        twitter = data.wallet_profile.wallet_profile.wallet_profile.twitter
         document.getElementById("wallet-twitter").href=twitter;
         document.getElementById("wallet-twitter-tt").href=twitter;
         document.getElementById("wallet-twitter-tt").innerHTML = twitter;
@@ -253,7 +253,7 @@ async function polkadot() {
 
         document.getElementById('wallet-website').innerHTML = "";
         const wallet_website = document.getElementById("wallet-website");
-        website = data.polkadot_wallet_profile.wallet_profile.wallet_profile.website
+        website = data.wallet_profile.wallet_profile.wallet_profile.website
         document.getElementById("wallet-website").href=website;
         document.getElementById("wallet-website-tt").href=website;
         document.getElementById("wallet-website-tt").innerHTML = website;
@@ -265,7 +265,7 @@ async function polkadot() {
 
         document.getElementById('wallet-email').innerHTML = "";
         const wallet_email = document.getElementById("wallet-email");
-        email = data.polkadot_wallet_profile.wallet_profile.wallet_profile.email
+        email = data.wallet_profile.wallet_profile.wallet_profile.email
         document.getElementById("wallet-email").href=email;
         document.getElementById("wallet-email-tt").href=email;
         document.getElementById("wallet-email-tt").innerHTML = email;
@@ -277,7 +277,7 @@ async function polkadot() {
 
         document.getElementById('wallet-element').innerHTML = "";
         const wallet_element = document.getElementById("wallet-element");
-        element = data.polkadot_wallet_profile.wallet_profile.wallet_profile.riot
+        element = data.wallet_profile.wallet_profile.wallet_profile.riot
         document.getElementById("wallet-element").href=element;
         document.getElementById("wallet-element-tt").href=element;
         document.getElementById("wallet-element-tt").innerHTML = element;
@@ -294,8 +294,8 @@ async function polkadot() {
         const wallet_key = document.getElementById("wallet-key");
 
         key = data.polkadot_wallet_address
-        kusama_address = data.polkadot_wallet_profile.wallet_profile.wallet_profile.kusama_address
-        polkadot_address = data.polkadot_wallet_profile.wallet_profile.wallet_profile.polkadot_address
+        kusama_address = data.wallet_profile.wallet_profile.wallet_profile.kusama_address
+        polkadot_address = data.wallet_profile.wallet_profile.wallet_profile.polkadot_address
 
 
         if (key != '') {
@@ -310,7 +310,7 @@ async function polkadot() {
 
 
 
-        display_name = data.polkadot_wallet_profile.wallet_profile.wallet_profile.display_name
+        display_name = data.wallet_profile.wallet_profile.wallet_profile.display_name
         document.getElementById('display_name').innerHTML = display_name;
 
         // identicon
@@ -320,29 +320,29 @@ async function polkadot() {
         identicon.size = '30'
         document.getElementById('indenticon-span').appendChild(identicon);
 
-        legal_name = data.polkadot_wallet_profile.wallet_profile.wallet_profile.legal_name
+        legal_name = data.wallet_profile.wallet_profile.wallet_profile.legal_name
         document.getElementById('legal_name').innerHTML = legal_name;
-        index = data.polkadot_wallet_profile.wallet_profile.wallet_profile.account_index
+        index = data.wallet_profile.wallet_profile.wallet_profile.account_index
         document.getElementById('index').innerHTML = index;
-        role = data.polkadot_wallet_profile.wallet_profile.wallet_profile.role
+        role = data.wallet_profile.wallet_profile.wallet_profile.role
         document.getElementById('role').innerHTML = role;
 
         // balances
-        total_balance = data.polkadot_wallet_profile.wallet_profile.balances.total_balance
+        total_balance = data.wallet_profile.wallet_profile.balances.total_balance
         document.getElementById('total_balance').innerHTML = total_balance;
-        total_balance_dollars = data.polkadot_wallet_profile.wallet_profile.balances.total_balance_dollars
+        total_balance_dollars = data.wallet_profile.wallet_profile.balances.total_balance_dollars
         exchangeRates(total_balance_dollars, 'dollar', 'total_balance_dollars')
-        transferable_balance = data.polkadot_wallet_profile.wallet_profile.balances.transferable_balance
+        transferable_balance = data.wallet_profile.wallet_profile.balances.transferable_balance
         document.getElementById('transferable_balance').innerHTML = transferable_balance;
-        transferable_balance_dollars = data.polkadot_wallet_profile.wallet_profile.balances.transferable_balance_dollars
+        transferable_balance_dollars = data.wallet_profile.wallet_profile.balances.transferable_balance_dollars
         exchangeRates(transferable_balance_dollars, 'dollar', 'transferable_balance_dollars')
-        locked_balance = data.polkadot_wallet_profile.wallet_profile.balances.locked_balance
+        locked_balance = data.wallet_profile.wallet_profile.balances.locked_balance
         document.getElementById('locked_balance').innerHTML = locked_balance;
-        locked_balance_dollars = data.polkadot_wallet_profile.wallet_profile.balances.locked_balance_dollars
+        locked_balance_dollars = data.wallet_profile.wallet_profile.balances.locked_balance_dollars
         exchangeRates(locked_balance_dollars, 'dollar', 'locked_balance_dollars')
-        reserved_balance = data.polkadot_wallet_profile.wallet_profile.balances.reserved_balance
+        reserved_balance = data.wallet_profile.wallet_profile.balances.reserved_balance
         document.getElementById('reserved_balance').innerHTML = reserved_balance;
-        reserved_balance_dollars = data.polkadot_wallet_profile.wallet_profile.balances.reserved_balance_dollars
+        reserved_balance_dollars = data.wallet_profile.wallet_profile.balances.reserved_balance_dollars
         exchangeRates(reserved_balance_dollars, 'dollar', 'reserved_balance_dollars')
 
         // paper handed and diamond handed

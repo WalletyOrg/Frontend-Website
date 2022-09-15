@@ -37,7 +37,6 @@ window.onload = async function load(){
 
     current_dates = chain_state.polkadot_general.currentDates.date
     document.getElementById('currentDates').innerHTML = current_dates;
-
     polkadotPrice = chain_state.polkadot_general.polkadot_price
     exchangeRates(polkadotPrice, 'dollar', 'polkadot_price')
     market_cap = chain_state.polkadot_general.polkadot_market_cap

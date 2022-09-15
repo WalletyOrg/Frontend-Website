@@ -2,8 +2,6 @@
 // document.getElementById('loading-screen').style.visibility = 'hidden'
 // document.getElementById('main').style.visibility = 'visible'
 
-console.log(123)
-
 
 servers_alive = false
 // main server alive check
@@ -183,17 +181,16 @@ async function kusama() {
     var wallet_address = url.searchParams.get('wallet_address');
     document.getElementById('wallet_address').value = wallet_address;
 
-    console.log(1235)
 
     const api_url = 'https://web.api.wallety.org/kusama/?wallet_address=' + wallet_address
     const responce = await fetch(api_url);
     data = await responce.json();
-
-    console.log(1235)
     
     console.log(data)
 
     function displayData() {
+
+        console.log(123)
         
         // general data
         current_dates = data.chain_state.kusama_general.current_dates.date
@@ -586,7 +583,7 @@ async function kusama() {
         data_loaded = true
         document.getElementById('loading-gif').innerHTML = "";
     }
-    if (data.wallety_org_kusama_server_status == 200){displayData()}
+    if (data.wallety_org_server_status == 200){displayData()}
     else {
         document.getElementById('loading-gif').innerHTML = ''
         alert('Hmm something went wrong, please try again later')

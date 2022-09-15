@@ -572,7 +572,7 @@ async function polkadot() {
         data_loaded = true
         document.getElementById('loading-gif').innerHTML = "";
     }
-    if (data.wallety_org_polkadot_server_status == 200){displayData()}
+    if (data.wallety_org_server_status == 200){displayData()}
     else {
         document.getElementById('loading-gif').innerHTML = ''
         alert('Hmm something went wrong, please try again later')

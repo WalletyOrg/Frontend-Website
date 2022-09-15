@@ -358,15 +358,15 @@ async function kusama() {
 
         // paper handed and diamond handed
         // paper
-        paper_coins = data.kusama_paper_diamond_handed.handed.paper_handed.paper_handed_coins
+        paper_coins = data.paper_diamond_handed.handed.paper_handed.paper_handed_coins
         document.getElementById('paper-coins').innerHTML = paper_coins
-        paper_dollars = data.kusama_paper_diamond_handed.handed.paper_handed.paper_handed_coins_dollars
+        paper_dollars = data.paper_diamond_handed.handed.paper_handed.paper_handed_coins_dollars
         exchangeRates(paper_dollars, 'dollar', 'paper-dollars')
 
         // diamond
-        diamond_coins = data.kusama_paper_diamond_handed.handed.diamond_handed.diamond_handed_coins
+        diamond_coins = data.paper_diamond_handed.handed.diamond_handed.diamond_handed_coins
         document.getElementById('diamond-coins').innerHTML = diamond_coins
-        diamond_dollars = data.kusama_paper_diamond_handed.handed.diamond_handed.diamond_handed_coins_dollars
+        diamond_dollars = data.paper_diamond_handed.handed.diamond_handed.diamond_handed_coins_dollars
         exchangeRates(diamond_dollars, 'dollar', 'diamond-dollars')
 
         // monthly

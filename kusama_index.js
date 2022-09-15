@@ -183,12 +183,16 @@ async function kusama() {
     var wallet_address = url.searchParams.get('wallet_address');
     document.getElementById('wallet_address').value = wallet_address;
 
+    console.log(1235)
+
     const api_url = 'https://web.api.wallety.org/kusama/?wallet_address=' + wallet_address
     const responce = await fetch(api_url);
     data = await responce.json();
+    
+    console.log(data)
 
     function displayData() {
-        console.log(data)
+        
         // general data
         current_dates = data.general_kusama.kusama_general.currentDates.date
         document.getElementById('currentDates').innerHTML = current_dates;

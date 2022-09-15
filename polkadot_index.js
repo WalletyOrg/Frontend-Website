@@ -298,14 +298,14 @@ async function polkadot() {
         polkadot_address = data.wallet_profile.wallet_profile.wallet_profile.polkadot_address
 
 
-        if (key != '') {
-            var img = document.createElement("img");
-            img.src = 'images/key.svg';
-            img.style.marginLeft = '3px'
-            img.style.marginRight = '2.5px'
-            wallet_key.appendChild(img);
-            document.getElementById('key-tooltip').style.display = 'inline-block'
-        }
+        // if (key != '') {
+        //     var img = document.createElement("img");
+        //     img.src = 'images/key.svg';
+        //     img.style.marginLeft = '3px'
+        //     img.style.marginRight = '2.5px'
+        //     wallet_key.appendChild(img);
+        //     document.getElementById('key-tooltip').style.display = 'inline-block'
+        // }
 
 
 

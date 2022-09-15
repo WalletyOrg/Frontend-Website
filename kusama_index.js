@@ -2,6 +2,7 @@
 // document.getElementById('loading-screen').style.visibility = 'hidden'
 // document.getElementById('main').style.visibility = 'visible'
 
+console.log(123)
 
 
 servers_alive = false

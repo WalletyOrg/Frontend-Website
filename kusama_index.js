@@ -186,11 +186,10 @@ async function kusama() {
     const responce = await fetch(api_url);
     data = await responce.json();
     
-    console.log(data)
+
 
     function displayData() {
 
-        console.log(123)
         
         // general data
         current_dates = data.chain_state.kusama_general.current_dates.date

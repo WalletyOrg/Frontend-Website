@@ -884,6 +884,8 @@ custom_dataTF = false
 
 async function getCustomData() {
 
+    console.log('123')
+
     data_loaded = false
 
     var from = document.getElementById('custom-from').value

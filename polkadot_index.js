@@ -891,7 +891,7 @@ async function customData() {
         var custom_loading_span = document.getElementById("customLoading");
         custom_loading_span.appendChild(custom_loading_img);
 
-        const customUrl = 'https://web.api.wallety.org/polkadot/customdata/?' + '&wallet_address=' + wallet_address  + '&from=' + from + '&to=' + to
+        const customUrl = 'https://web.api.wallety.org/customdata/?' + '&wallet_address=' + wallet_address  + '&from=' + from + '&to=' + to + '&network=polkadot'
 
     
         customData = await fetch(customUrl)

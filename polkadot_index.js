@@ -869,7 +869,7 @@ custom_CSV_u_withdraws_transfers = ['-']
 custom_CSV_u_deposits_transfers = ['-']
 
 
-customDataTF = false
+custom_dataTF = false
 
 async function customData() {
 
@@ -891,89 +891,89 @@ async function customData() {
         var custom_loading_span = document.getElementById("customLoading");
         custom_loading_span.appendChild(custom_loading_img);
 
-        const customUrl = 'https://web.api.wallety.org/customdata/?' + '&wallet_address=' + wallet_address  + '&from=' + from + '&to=' + to + '&network=polkadot'
+        const customUrl = 'https://web.api.wallety.org/custom_data/?' + '&wallet_address=' + wallet_address  + '&from=' + from + '&to=' + to + '&network=polkadot'
 
     
-        customData = await fetch(customUrl)
-        customData = await customData.json();
+        custom_data = await fetch(customUrl)
+        custom_data = await custom_data.json();
 
         // displaying custom data
         // custom data title
         document.getElementById('monthly-data-title').innerHTML = 'Custom Transfer Data'
-        custom_data_title_date = customData.custom_data_total.custom_dates_title
+        custom_data_title_date = custom_data.custom_data_total.custom_dates_title
         document.getElementById('monthly-data-title-date').innerHTML = custom_data_title_date
 
         // custom total
         document.getElementById('monthly-total-data-title').innerHTML = 'Custom Total'
-        custom_total_failed_gas_coin = customData.custom_data_total.custom_total_failed_gas_coin
+        custom_total_failed_gas_coin = custom_data.custom_data_total.custom_total_failed_gas_coin
         document.getElementById('monthly_total_failed_gas_coin').innerHTML = custom_total_failed_gas_coin;
-        custom_total_failed_gas_dollars = customData.custom_data_total.custom_total_failed_gas_dollars
+        custom_total_failed_gas_dollars = custom_data.custom_data_total.custom_total_failed_gas_dollars
         document.getElementById('monthly_total_failed_gas_dollars').innerHTML = custom_total_failed_gas_dollars;
-        custom_total_failed_interactions = customData.custom_data_withdrawals.custom_withdrawal_failed_interactions
+        custom_total_failed_interactions = custom_data.custom_data_withdrawals.custom_withdrawal_failed_interactions
         document.getElementById('monthly_total_failed_interactions').innerHTML = custom_total_failed_interactions;
-        custom_total_gas_coin = customData.custom_data_total.custom_total_gas_coin
+        custom_total_gas_coin = custom_data.custom_data_total.custom_total_gas_coin
         document.getElementById('monthly_total_gas_coin').innerHTML = custom_total_gas_coin;
-        custom_total_gas_dollars = customData.custom_data_total.custom_total_gas_dollars
+        custom_total_gas_dollars = custom_data.custom_data_total.custom_total_gas_dollars
         document.getElementById('monthly_total_gas_dollars').innerHTML = custom_total_gas_dollars;
-        custom_total_interactions = customData.custom_data_total.custom_total_interactions
+        custom_total_interactions = custom_data.custom_data_total.custom_total_interactions
         document.getElementById('monthly_total_interactions').innerHTML = custom_total_interactions;
-        custom_total_volume_coins = customData.custom_data_total.custom_total_volume_coins
+        custom_total_volume_coins = custom_data.custom_data_total.custom_total_volume_coins
         document.getElementById('monthly_total_volume_coins').innerHTML = custom_total_volume_coins;
-        custom_total_volume_dollars = customData.custom_data_total.custom_total_volume_dollars
+        custom_total_volume_dollars = custom_data.custom_data_total.custom_total_volume_dollars
         document.getElementById('monthly_total_volume_dollars').innerHTML = custom_total_volume_dollars;
         custom_total_successful_interactions = custom_total_interactions - custom_total_failed_interactions;
         document.getElementById('monthly-total-successful-interactions').innerHTML = custom_total_successful_interactions;
-        custom_total_last_txn_date_date = customData.custom_data_total.custom_total_last_txn_date.last_txn_full_date
+        custom_total_last_txn_date_date = custom_data.custom_data_total.custom_total_last_txn_date.last_txn_full_date
         document.getElementById('monthly_total_last_txn_date_date').innerHTML = custom_total_last_txn_date_date;
-        custom_total_last_txn_date_days = customData.custom_data_total.custom_total_last_txn_date.days_since
+        custom_total_last_txn_date_days = custom_data.custom_data_total.custom_total_last_txn_date.days_since
         document.getElementById('monthly_total_last_txn_date_days').innerHTML = custom_total_last_txn_date_days;
-        custom_total_first_txn_date_date = customData.custom_data_total.custom_total_first_txn_date.first_txn_full_date
+        custom_total_first_txn_date_date = custom_data.custom_data_total.custom_total_first_txn_date.first_txn_full_date
         document.getElementById('monthly_total_first_txn_date_date').innerHTML = custom_total_first_txn_date_date;
-        custom_total_first_txn_date_days = customData.custom_data_total.custom_total_first_txn_date.days_since
+        custom_total_first_txn_date_days = custom_data.custom_data_total.custom_total_first_txn_date.days_since
         document.getElementById('monthly_total_first_txn_date_days').innerHTML = custom_total_first_txn_date_days;
 
         // custom deposit
         document.getElementById('monthly-deposit-data-title').innerHTML = 'Custom Deposits'
-        custom_deposit_interactions = customData.custom_data_deposits.custom_deposit_interactions
+        custom_deposit_interactions = custom_data.custom_data_deposits.custom_deposit_interactions
         document.getElementById('monthly_deposit_interactions').innerHTML = custom_deposit_interactions;
-        custom_deposit_volume_coins = customData.custom_data_deposits.custom_deposit_volume_coins
+        custom_deposit_volume_coins = custom_data.custom_data_deposits.custom_deposit_volume_coins
         document.getElementById('monthly_deposit_volume_coins').innerHTML = custom_deposit_volume_coins;
-        custom_deposit_volume_dollars = customData.custom_data_deposits.custom_deposit_volume_dollars
+        custom_deposit_volume_dollars = custom_data.custom_data_deposits.custom_deposit_volume_dollars
         document.getElementById('monthly_deposit_volume_dollars').innerHTML = custom_deposit_volume_dollars;
-        custom_deposits_first_txn_date_date = customData.custom_data_deposits.custom_deposits_first_txn_date.first_txn_full_date
+        custom_deposits_first_txn_date_date = custom_data.custom_data_deposits.custom_deposits_first_txn_date.first_txn_full_date
         document.getElementById('monthly_deposits_first_txn_date_date').innerHTML = custom_deposits_first_txn_date_date;
-        custom_deposits_first_txn_date_days = customData.custom_data_deposits.custom_deposits_first_txn_date.days_since
+        custom_deposits_first_txn_date_days = custom_data.custom_data_deposits.custom_deposits_first_txn_date.days_since
         document.getElementById('monthly_deposits_first_txn_date_days').innerHTML = custom_deposits_first_txn_date_days;
-        custom_deposits_last_txn_date_date = customData.custom_data_deposits.custom_deposits_last_txn_date.last_txn_full_date
+        custom_deposits_last_txn_date_date = custom_data.custom_data_deposits.custom_deposits_last_txn_date.last_txn_full_date
         document.getElementById('monthly_deposits_last_txn_date_date').innerHTML = custom_deposits_last_txn_date_date;
-        custom_deposits_last_txn_date_days = customData.custom_data_deposits.custom_deposits_last_txn_date.days_since
+        custom_deposits_last_txn_date_days = custom_data.custom_data_deposits.custom_deposits_last_txn_date.days_since
         document.getElementById('monthly_deposits_last_txn_date_days').innerHTML = custom_deposits_last_txn_date_days;
 
         // custom withdrawal
         document.getElementById('monthly-withdrawal-data-title').innerHTML = 'Custom Withdrawals'
-        custom_withdrawal_failed_gas_coin = customData.custom_data_withdrawals.custom_withdrawal_failed_gas_coin
+        custom_withdrawal_failed_gas_coin = custom_data.custom_data_withdrawals.custom_withdrawal_failed_gas_coin
         document.getElementById('monthly_withdrawal_failed_gas_coin').innerHTML = custom_withdrawal_failed_gas_coin;
-        custom_withdrawal_failed_gas_dollars = customData.custom_data_withdrawals.custom_withdrawal_failed_gas_dollars
+        custom_withdrawal_failed_gas_dollars = custom_data.custom_data_withdrawals.custom_withdrawal_failed_gas_dollars
         document.getElementById('monthly_withdrawal_failed_gas_dollars').innerHTML = custom_withdrawal_failed_gas_dollars;
-        custom_withdrawal_failed_interactions = customData.custom_data_withdrawals.custom_withdrawal_failed_interactions
+        custom_withdrawal_failed_interactions = custom_data.custom_data_withdrawals.custom_withdrawal_failed_interactions
         document.getElementById('monthly_withdrawal_failed_interactions').innerHTML = custom_withdrawal_failed_interactions;
-        custom_withdrawal_first_txn_date_date = customData.custom_data_withdrawals.custom_withdrawal_first_txn_date.first_txn_full_date
+        custom_withdrawal_first_txn_date_date = custom_data.custom_data_withdrawals.custom_withdrawal_first_txn_date.first_txn_full_date
         document.getElementById('monthly_withdrawal_first_txn_date_date').innerHTML = custom_withdrawal_first_txn_date_date;
-        custom_withdrawal_first_txn_date_days = customData.custom_data_withdrawals.custom_withdrawal_first_txn_date.days_since
+        custom_withdrawal_first_txn_date_days = custom_data.custom_data_withdrawals.custom_withdrawal_first_txn_date.days_since
         document.getElementById('monthly_withdrawal_first_txn_date_days').innerHTML = custom_withdrawal_first_txn_date_days;
-        custom_withdrawal_gas_coin = customData.custom_data_withdrawals.custom_withdrawal_gas_coin
+        custom_withdrawal_gas_coin = custom_data.custom_data_withdrawals.custom_withdrawal_gas_coin
         document.getElementById('monthly_withdrawal_gas_coin').innerHTML = custom_withdrawal_gas_coin;
-        custom_withdrawal_gas_dollars = customData.custom_data_withdrawals.custom_withdrawal_gas_dollars
+        custom_withdrawal_gas_dollars = custom_data.custom_data_withdrawals.custom_withdrawal_gas_dollars
         document.getElementById('monthly_withdrawal_gas_dollars').innerHTML = custom_withdrawal_gas_dollars;
-        custom_withdrawal_interactions = customData.custom_data_withdrawals.custom_withdrawal_interactions
+        custom_withdrawal_interactions = custom_data.custom_data_withdrawals.custom_withdrawal_interactions
         document.getElementById('monthly_withdrawal_interactions').innerHTML = custom_withdrawal_interactions;
-        custom_withdrawal_last_txn_date_date = customData.custom_data_withdrawals.custom_withdrawal_last_txn_date.last_txn_full_date
+        custom_withdrawal_last_txn_date_date = custom_data.custom_data_withdrawals.custom_withdrawal_last_txn_date.last_txn_full_date
         document.getElementById('monthly_withdrawal_last_txn_date_date').innerHTML = custom_withdrawal_last_txn_date_date;
-        custom_withdrawal_last_txn_date_days = customData.custom_data_withdrawals.custom_withdrawal_last_txn_date.days_since
+        custom_withdrawal_last_txn_date_days = custom_data.custom_data_withdrawals.custom_withdrawal_last_txn_date.days_since
         document.getElementById('monthly_withdrawal_last_txn_date_days').innerHTML = custom_withdrawal_last_txn_date_days;
-        custom_withdrawal_volume_coin = customData.custom_data_withdrawals.custom_withdrawal_volume_coin
+        custom_withdrawal_volume_coin = custom_data.custom_data_withdrawals.custom_withdrawal_volume_coin
         document.getElementById('monthly_withdrawal_volume_coin').innerHTML = custom_withdrawal_volume_coin;
-        custom_withdrawal_volume_dollars = customData.custom_data_withdrawals.custom_withdrawal_volume_dollars
+        custom_withdrawal_volume_dollars = custom_data.custom_data_withdrawals.custom_withdrawal_volume_dollars
         document.getElementById('monthly_withdrawal_volume_dollars').innerHTML = custom_withdrawal_volume_dollars;
         custom_withdrawal_successful_interactions =  custom_withdrawal_interactions - custom_withdrawal_failed_interactions;
         document.getElementById('monthly-withdrawal-successful-interactions').innerHTML = custom_withdrawal_successful_interactions;
@@ -1003,7 +1003,7 @@ async function customData() {
 
 
         // custom unique 
-        custom_data_key = customData.custom_top_accounts.all_top_accounts
+        custom_data_key = custom_data.custom_top_accounts.all_top_accounts
         custom_total_unique = custom_data_key.all_total
         custom_deposits_unique = custom_data_key.all_deposits
         custom_withdrawals_unique = custom_data_key.all_withdrawals
@@ -1036,7 +1036,7 @@ async function customData() {
         document.getElementById('monthly-u-data-tooltip').innerHTML = 'Custom unique wallets lets you see your total, withdrawal and deposited interactions with individual addreses you have transacted with'
 
         // finishing
-        customDataTF = true
+        custom_dataTF = true
         // loading over
         document.getElementById("customLoading").innerHTML = '';
         data_loaded = true
@@ -1162,7 +1162,7 @@ async function changeCurrencyData(newCurrency) {
     exchangeRates(diamond_dollars, newCurrency, 'diamond-dollars')
     // monthly / custom
     // monthly
-    if (customDataTF == false) {
+    if (custom_dataTF == false) {
         // monthly deposit
         exchangeRates(monthly_deposit_volume_dollars, newCurrency, 'monthly_deposit_volume_dollars')
         // monthly total
@@ -1186,7 +1186,7 @@ async function changeCurrencyData(newCurrency) {
         txnLoopChangeCurrency(monthly_deposits_unique, 'monthly-unique-wallets-deposits')
     }
     // custom
-    if (customDataTF == true) {
+    if (custom_dataTF == true) {
         // custom deposit
         exchangeRates(custom_deposit_volume_dollars, newCurrency, 'monthly_deposit_volume_dollars')
         // custom total
@@ -1198,7 +1198,7 @@ async function changeCurrencyData(newCurrency) {
         exchangeRates(custom_withdrawal_gas_dollars, newCurrency, 'monthly_withdrawal_gas_dollars')
         exchangeRates(custom_withdrawal_volume_dollars, newCurrency, 'monthly_withdrawal_volume_dollars')
         // custom unique 
-        custom_data_key = customData.custom_top_accounts.all_top_accounts
+        custom_data_key = custom_data.custom_top_accounts.all_top_accounts
         custom_total_unique = custom_data_key.all_total
         custom_deposits_unique = custom_data_key.all_deposits
         custom_withdrawals_unique = custom_data_key.all_withdrawals
@@ -1317,7 +1317,7 @@ function CSVdata() {
         // total unique deposits
         CSV_u_deposits_transfers = []
         CSVLoopSetCurrency(deposits_unique, CSV_u_deposits_transfers)
-        if (customDataTF == true) {
+        if (custom_dataTF == true) {
             // custom unique CSV
             // custom unique total
             custom_CSV_u_total_transfers = []

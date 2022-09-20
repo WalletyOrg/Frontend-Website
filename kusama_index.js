@@ -882,7 +882,7 @@ custom_CSV_u_deposits_transfers = ['-']
 
 custom_dataTF = false
 
-async function customData() {
+async function getCustomData() {
 
     data_loaded = false
 

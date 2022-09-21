@@ -36,6 +36,8 @@ window.onload = async function load(){
     var general_responce = await fetch(general_api_url);
     var chain_state = await general_responce.json();
 
+    console.log(chain_state)
+
     current_dates = chain_state.kusama_general.current_dates.date
     document.getElementById('current_dates').innerHTML = current_dates;
     kusamaPrice = chain_state.kusama_general.kusama_price
